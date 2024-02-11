@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+/**** HEADER & NAVBAR ****/
+#brand-style {
+  margin-right: 20vh;
+  margin-left: 1vh;
+}
+.navbar-style {
+  background-color: black;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.3));
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+  .responsive-width {
+    width: 40vh !important;
+  }
+  #brand-style {
+    margin-right: 10vh;
+  }
+  .navbar-toggler {
+    margin-right: 1vh;
   }
 }
-
-.App-header {
-  background-color: #282c34;
+/**** HOME PAGE ****/
+.home-container {
+  background-color: black;
+  background-size: cover;
+  background-position: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.home-title {
+  background-color: #000;
+  box-shadow: 0 8px 92px 20px rgba(71,28,115,.7); /* Cambia il colore di sfondo a tuo piacimento */
+  padding: 20px; /* Aggiungi padding per separare visivamente dal resto del contenuto */
+  margin-bottom: 10rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  border-radius: 10px;
+  margin-top: 5rem;
+  border: 1px solid #101010;
+}
+
+.home-title h1 {
+  color: gold;
+}
+
+
+.home-title h2 {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.custom-card {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  width: 40vh !important;
+  height: 25vh !important;
+  margin-bottom: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.custom-img {
+  max-width: 60%;
+  height: auto;
+  max-height: 60%;
 }
+.custom-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(167, 246, 251, 1);
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+
+/**** FOOTER ****/
+.footer {
+  margin-top: auto;
+  background-color: black;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
+}
+
+/**** POKEMON PAGE****/
+.pokemon-page {
+  background-image: url('/public/images/pokemon-background.png');
+  background-size: auto;
+  background-position: center;
+  background-color: #232323;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  min-height: 100vh;
+}
+.pokemon-title {
+  color: white; /* Testo bianco fino ai : */
+}
+
+.card {
+  margin: 0.3rem;
+  box-sizing: border-box;
+  border: none !important;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Altezza al 100% per garantire il centratura verticale */
+  padding: 0.1rem;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('/public/images/pokemon-background.png');
+  background-color: #232323;
+  color: white;
+
+}
+.pagination-pokemon {
+  padding-bottom: 1rem ;
+  padding-top: 1rem;
+  margin-bottom: 0;
+  
+}
+/**** POKEMON-TOOLS ****/
+
+
