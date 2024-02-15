@@ -205,3 +205,29 @@
 .prices-section ul li strong {
   font-weight: bold;
 }
+
+/**** MAGIC-PAGE ****/
+
+.magic-page {
+  min-height: 100vh;
+  background-image: url('/public/images/pokemon-background.png');
+  background-color: #232323;
+}
+
+.result-card {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.loading-container-magic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #202124;
+  color: white;
+}
+
+.magic-card-details {
+  background-color: aquamarine;
+}
