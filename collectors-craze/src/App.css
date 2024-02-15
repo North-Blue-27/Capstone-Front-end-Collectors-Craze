@@ -228,6 +228,14 @@
   color: white;
 }
 
+/**** MAGIC-DETAIL-PAGE ****/
+
+.magic-detail-container {
+  margin-top: 2rem;
+}
 .magic-card-details {
-  background-color: aquamarine;
+  background-color: peachpuff;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
 }
