@@ -30,8 +30,8 @@
 }
 .home-title {
   background-color: #000;
-  box-shadow: 0 8px 92px 20px rgba(71,28,115,.7); /* Cambia il colore di sfondo a tuo piacimento */
-  padding: 20px; /* Aggiungi padding per separare visivamente dal resto del contenuto */
+  box-shadow: 0 8px 92px 20px rgba(71,28,115,.7);
+  padding: 20px;
   margin-bottom: 10rem;
   margin-left: 3rem;
   margin-right: 3rem;
@@ -109,7 +109,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Altezza al 100% per garantire il centratura verticale */
+  height: 100%;
   padding: 0.1rem;
 }
 
@@ -129,6 +129,79 @@
   margin-bottom: 0;
   
 }
-/**** POKEMON-TOOLS ****/
+/**** POKEMON-DETAIL ****/
 
+.details-container h2,
+.details-container h3 {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  color: red;
+}
 
+.details-container p {
+  font-family: 'Arial', sans-serif;
+}
+
+.poke-detail-container {
+  padding: 3rem 1.5rem !important;
+  background-image: url('/public/images/pokemon-background.png');
+  background-color: #232323;
+}
+
+.details-container {
+  background-color: #18191a;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.image-container {
+  background-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.abilities-attacks-section ul {
+  padding-left: 0;
+}
+
+.abilities-attacks-section ul li {
+  list-style-type: none;
+}
+
+.additional-info-section div {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.prices-section .tcgplayer-section,
+.prices-section .cardmarket-section {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.tcgplayer-section,
+.cardmarket-section {
+  word-wrap: break-word;
+
+}
+
+.prices-section h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.prices-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.prices-section ul li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.prices-section ul li strong {
+  font-weight: bold;
+}

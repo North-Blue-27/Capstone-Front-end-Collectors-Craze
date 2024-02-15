@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { RingLoader } from "react-spinners";
 import { Pagination, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import PokemonTools from '../components/PokemonTools'; // Importa il nuovo componente
 
 const Pokemon = () => {
@@ -180,9 +181,11 @@ const Pokemon = () => {
         <Row xs={1} sm={2} md={3} lg={5}>
           {cards.map((card, index) => (
             <Col key={card.id} className="center-content">
-              <div className="card">
-                <img src={card.images.large} alt={card.name} />
-              </div>
+              <Link to={`/pokemon/${card.id}`}>
+                <div className="card">
+                  <img src={card.images.large} alt={card.name} />
+                </div>
+              </Link>
             </Col>
           ))}
         </Row>
@@ -205,3 +208,4 @@ const Pokemon = () => {
 };
 
 export default Pokemon;
+
