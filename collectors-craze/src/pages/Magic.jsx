@@ -8,7 +8,6 @@ const Magic = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState([]);
     const [sets, setSets] = useState([]);
-    const [lastSearches, setLastSearches] = useState([]);
     const [foundCardIds, setFoundCardIds] = useState([]);
     const [loading, setLoading] = useState(false);
 
@@ -45,7 +44,6 @@ const Magic = () => {
             setSearchResults(uniqueResults);
             const newCardIds = uniqueResults.map(card => card.id);
             setFoundCardIds(prevIds => [...prevIds, ...newCardIds]);
-            setLastSearches(prevSearches => [searchTerm, ...prevSearches.slice(0, 4)]);
             setSearchTerm('');
             setLoading(false);
         } catch (error) {
@@ -79,10 +77,6 @@ const Magic = () => {
         navigate(`/magic/${card.id}`); // Utilizza navigate invece di history.push
     };
 
-    const handlePlaceholderClick = (placeholder) => {
-        setSearchTerm(placeholder);
-    };
-
     const handleInputChange = (e) => {
         setSearchTerm(e.target.value);
     };
@@ -99,6 +93,14 @@ const Magic = () => {
     return (
         <Container fluid className='magic-page'>
             <Row className="py-4">
+                <Col>
+                    <div className="header-content">
+                        <h1>Benvenuto in Magic: The Gathering</h1>
+                        <h2>Cerca le tue carte preferite</h2>
+                    </div>
+                </Col>
+            </Row>
+            <Row className="py-4">
                 <Col className="search-col">
                     <FormControl
                         className="search-input"
@@ -106,32 +108,23 @@ const Magic = () => {
                         value={searchTerm}
                         onChange={handleInputChange}
                     />
-                    <div>
-                        <small className="last-searches-label">Last Searches: </small>
-                        <div className="last-searches">
-                            {lastSearches.map((search, index) => (
-                                <Button key={index} size="sm" className="last-searches-btn" onClick={() => handlePlaceholderClick(search)}>{search}</Button>
-                            ))}
-                        </div>
-                    </div>
                 </Col>
                 <Col xs="auto">
-                    <Button variant="primary" onClick={handleSearch} className="search-btn">Search</Button>
+                    <Button variant='outline-light'  onClick={handleSearch} className="search-btn">Search</Button>
                 </Col>
                 <Col xs="auto">
-                    <Dropdown>
-                        <Dropdown.Toggle variant="primary" id="dropdown-basic" className="select-set-toggle">
-                            Select Set
-                        </Dropdown.Toggle>
-
-                        <Dropdown.Menu>
-                            {sets.map((set) => (
-                                <Dropdown.Item key={set.code} onClick={() => handleSetSelect(set.code)} className="set-item">
-                                    {set.name}
-                                </Dropdown.Item>
-                            ))}
-                        </Dropdown.Menu>
-                    </Dropdown>
+                <Dropdown>
+                    <Dropdown.Toggle variant='outline-warning' id="dropdown-basic" className="select-set-toggle">
+                        Select Set
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu style={{ width: '20rem', maxHeight: '70vh', overflowY: 'auto' }} className="custom-dropdown-menu">
+                        {sets.map((set) => (
+                            <Dropdown.Item key={set.code} onClick={() => handleSetSelect(set.code)} className="set-item">
+                                {set.name}
+                            </Dropdown.Item>
+                        ))}
+                    </Dropdown.Menu>
+                </Dropdown>
                 </Col>
             </Row>
             <Row>

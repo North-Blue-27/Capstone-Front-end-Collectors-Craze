@@ -213,6 +213,10 @@
   background-image: url('/public/images/pokemon-background.png');
   background-color: #232323;
 }
+.header-content {
+  color: white;
+  text-align: center;
+}
 
 .result-card {
   background-color: transparent !important;
@@ -227,15 +231,51 @@
   background-color: #202124;
   color: white;
 }
+.custom-dropdown-menu .set-item:hover {
+  background-color: slategray;
+  color: white;
+}
+@media (max-width: 768px) {
+  .custom-dropdown-menu {
+      width: 15rem !important;
+      max-height: 50vh;
+  }
+}
+@media (max-width: 500px) {
+  .custom-dropdown-menu {
+      width: 12rem !important;
+      max-height: 60vh !important;
+  }
+}
+
+
 
 /**** MAGIC-DETAIL-PAGE ****/
 
 .magic-detail-container {
-  margin-top: 2rem;
+  padding: 3rem 1.5rem !important;
+  background-image: url('/public/images/pokemon-background.png');
+  background-color: #232323;
+}
+.magic-image {
+  border-radius: 18px;
 }
 .magic-card-details {
-  background-color: darkcyan;
+  background-color: #18191a;
+  color: white;
   text-align: center;
   padding: 1rem;
   border-radius: 10px;
+}
+
+.magic-detail-title{
+  color: red;
+}
+.magic-detail-section-title {
+  color: red;
+  font-size: 1.5rem;
+}
+
+.magic-image {
+  margin-bottom: 1.5rem;
 }
