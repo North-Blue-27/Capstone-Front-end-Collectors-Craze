@@ -1,0 +1,28 @@
+{
+    "users": [
+      {
+        "email": "antocasa@libero.it",
+        "password": "$2a$10$Be5Z9Vd1O74DrWhG891h3eWSPYTouKITWMSbkrsHkqsImWnJNiTfa",
+        "name": "Antonio",
+        "surname": "Casalena",
+        "username": "Anto27",
+        "id": 1
+      },
+      {
+        "email": "piero@libero.it",
+        "password": "$2a$10$FAzRHUVM/1L2OceKXJSqie/tkMYdI5aBn1A85yopd5fcmAOWfV36W",
+        "name": "Pierino",
+        "surname": "Giorgi",
+        "username": "Piegio12",
+        "id": 2
+      },
+      {
+        "email": "aldoba@libero.it",
+        "password": "$2a$10$LfiYffHzfIGVgtWZ8wepJ.mTu9TRC/mBkoh7FewPO3yXB0B9mQNre",
+        "name": "Aldo",
+        "surname": "Baglio",
+        "username": "AldoBa1",
+        "id": 3
+      }
+    ]
+  }
