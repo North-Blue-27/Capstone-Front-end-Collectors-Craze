@@ -4,10 +4,13 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import { RingLoader } from "react-spinners";
 
 const PokemonDetail = () => {
+  // Ottiene l'ID del Pokémon dalla URL
   const { id } = useParams();
+  // Stati per memorizzare i dettagli del Pokémon e lo stato di caricamento
   const [pokemon, setPokemon] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  // Effetto per recuperare i dettagli del Pokémon quando l'ID cambia
   useEffect(() => {
     const fetchPokemonDetail = async () => {
       try {
@@ -31,15 +34,7 @@ const PokemonDetail = () => {
     fetchPokemonDetail();
   }, [id]);
 
-  if (loading) {
-    return (
-      <div className="loading-container">
-        <RingLoader color={"red"} loading={loading} size={100} />
-        <div>Loading...</div>
-      </div>
-    );
-  }
-
+  // Funzione per rendere un campo di dettaglio
   const renderField = (label, value) => {
     if (!value || (Array.isArray(value) && value.length === 0)) {
       return null;
@@ -52,8 +47,18 @@ const PokemonDetail = () => {
       </>
     );
   };
-  
 
+  // Se il caricamento è ancora in corso, visualizza il loader
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <RingLoader color={"red"} loading={loading} size={100} />
+        <div>Loading...</div>
+      </div>
+    );
+  }
+
+  // Se non ci sono dettagli del Pokémon, visualizza "Loading..."
   if (!pokemon) {
     return <div>Loading...</div>;
   }

@@ -5,14 +5,16 @@ import axios from 'axios';
 import { RingLoader } from "react-spinners";
 
 const Magic = () => {
+    // Dichiarazione degli stati
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState([]);
     const [sets, setSets] = useState([]);
     const [foundCardIds, setFoundCardIds] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    const navigate = useNavigate();
+    const navigate = useNavigate(); // Hook per la navigazione
 
+    // Effetto per ottenere i set disponibili all'avvio
     useEffect(() => {
         const fetchSets = async () => {
             try {
@@ -30,6 +32,7 @@ const Magic = () => {
         fetchSets();
     }, []);
 
+    // Funzione per gestire la ricerca delle carte
     const handleSearch = async () => {
         try {
             setLoading(true);
@@ -52,6 +55,7 @@ const Magic = () => {
         }
     };
 
+    // Funzione per gestire la selezione di un set
     const handleSetSelect = async (setCode) => {
         try {
             setLoading(true);
@@ -73,14 +77,17 @@ const Magic = () => {
         }
     };
 
+    // Funzione per gestire il click su una carta
     const handleCardClick = (card) => {
-        navigate(`/magic/${card.id}`); // Utilizza navigate invece di history.push
+        navigate(`/magic/${card.id}`);
     };
 
+    // Funzione per gestire il cambiamento dell'input di ricerca
     const handleInputChange = (e) => {
         setSearchTerm(e.target.value);
     };
 
+    // Rendering condizionale durante il caricamento
     if (loading) {
         return (
             <div className="loading-container">
@@ -90,6 +97,7 @@ const Magic = () => {
         );
     }
 
+    // Rendering della pagina
     return (
         <Container fluid className='magic-page'>
             <Row className="py-4">

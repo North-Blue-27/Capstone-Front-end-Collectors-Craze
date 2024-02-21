@@ -5,18 +5,21 @@ import axios from "axios";
 import { RingLoader } from "react-spinners";
 
 const MagicDetail = () => {
+  // Ottieni l'ID della carta dai parametri dell'URL
   const { id } = useParams();
+
+  // Dichiarazione degli stati
   const [card, setCard] = useState(null);
   const [symbols, setSymbols] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  // Effetto per ottenere i dettagli della carta e i simboli
   useEffect(() => {
     const fetchCardDetails = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(
-          `https://api.scryfall.com/cards/${id}`
-        );
+        // Richiesta per ottenere i dettagli della carta
+        const response = await axios.get(`https://api.scryfall.com/cards/${id}`);
         setCard(response.data);
         setLoading(false);
       } catch (error) {
@@ -27,6 +30,7 @@ const MagicDetail = () => {
 
     const fetchSymbols = async () => {
       try {
+        // Richiesta per ottenere i simboli delle carte
         const response = await axios.get("https://api.scryfall.com/symbology");
         setSymbols(response.data);
       } catch (error) {
@@ -34,10 +38,12 @@ const MagicDetail = () => {
       }
     };
 
+    // Esegui entrambe le richieste quando l'ID della carta cambia
     fetchCardDetails();
     fetchSymbols();
   }, [id]);
 
+  // Funzione per renderizzare il costo di mana
   const renderManaCost = (manaCost) => {
     if (!manaCost || !symbols) return null;
 
@@ -52,13 +58,12 @@ const MagicDetail = () => {
     return <span dangerouslySetInnerHTML={{ __html: manaCost }} />;
   };
 
+  // Funzione per renderizzare il testo dei simboli
   const renderSymbolText = (text) => {
     if (!text || !symbols) return null;
 
     text = text.replace(/\{([^}]+)\}/g, (match, symbol) => {
-      const symbolData = symbols.data.find(
-        (data) => data.symbol === `{${symbol}}`
-      );
+      const symbolData = symbols.data.find((data) => data.symbol === `{${symbol}}`);
       if (symbolData && symbolData.svg_uri) {
         return `<img src="${symbolData.svg_uri}" alt="${symbol}" style="width: 20px; height: 20px;" />`;
       }
@@ -68,6 +73,7 @@ const MagicDetail = () => {
     return <span dangerouslySetInnerHTML={{ __html: text }} />;
   };
 
+  // Rendering condizionale durante il caricamento
   if (loading || !card || !symbols) {
     return (
       <div className="loading-container">

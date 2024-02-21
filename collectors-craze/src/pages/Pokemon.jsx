@@ -6,16 +6,18 @@ import { Link } from 'react-router-dom';
 import PokemonTools from '../components/PokemonTools'; // Importa il nuovo componente
 
 const Pokemon = () => {
-  const [latestSet, setLatestSet] = useState(null);
-  const [cards, setCards] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [totalPages, setTotalPages] = useState(1);
-  const [searchTotalPages, setSearchTotalPages] = useState(1);
-  const [searched, setSearched] = useState(false);
-  const [pageTitle, setPageTitle] = useState(`Latest Pokemon Set: Loading...`);
+  // Definizione degli stati
+  const [latestSet, setLatestSet] = useState(null); // Stato per memorizzare l'ultimo set di Pokémon
+  const [cards, setCards] = useState([]); // Stato per memorizzare le carte
+  const [loading, setLoading] = useState(true); // Stato per gestire il caricamento
+  const [error, setError] = useState(null); // Stato per gestire gli errori
+  const [searchTerm, setSearchTerm] = useState(''); // Stato per memorizzare il termine di ricerca
+  const [totalPages, setTotalPages] = useState(1); // Stato per memorizzare il numero totale di pagine
+  const [searchTotalPages, setSearchTotalPages] = useState(1); // Stato per memorizzare il numero totale di pagine della ricerca
+  const [searched, setSearched] = useState(false); // Stato per indicare se è stata effettuata una ricerca
+  const [pageTitle, setPageTitle] = useState(`Latest Pokemon Set: Loading...`); // Stato per memorizzare il titolo della pagina
 
+  // Effetto per caricare l'ultimo set di Pokémon al caricamento della pagina
   useEffect(() => {
     const fetchLatestSet = async () => {
       try {
@@ -43,6 +45,7 @@ const Pokemon = () => {
     fetchLatestSet();
   }, []);
 
+  // Funzione per costruire la query di ricerca
   const buildSearchQuery = (searchTerm) => {
     const keywords = searchTerm.split(' ');
 
@@ -59,6 +62,7 @@ const Pokemon = () => {
     return query;
   };
 
+  // Funzione per recuperare le carte in base all'ID del set
   const fetchCards = async (setId, page) => {
     try {
       const cardsResponse = await axios.get(`https://api.pokemontcg.io/v2/cards`, {
@@ -83,6 +87,7 @@ const Pokemon = () => {
     }
   };
 
+  // Funzione per gestire la ricerca
   const handleSearch = async () => {
     if (!searchTerm) {
       return;
@@ -121,11 +126,13 @@ const Pokemon = () => {
     }
   };
 
+  // Funzione per gestire il cambio di pagina
   const handlePageChange = async (page) => {
     setLoading(true);
     await fetchCards(latestSet.id, page);
   };
 
+  // Funzione per gestire il cambio di pagina della ricerca
   const handleSearchPageChange = async (page) => {
     setLoading(true);
     try {
@@ -152,6 +159,7 @@ const Pokemon = () => {
     }
   };
 
+  // Controlli per il caricamento e la gestione degli errori
   if (loading) {
     return (
       <div className="loading-container">
@@ -165,6 +173,7 @@ const Pokemon = () => {
     return <div>Error: {error}</div>;
   }
 
+  // Rendering della pagina
   return (
     <div className="pokemon-page">
       <PokemonTools
@@ -208,4 +217,3 @@ const Pokemon = () => {
 };
 
 export default Pokemon;
-
