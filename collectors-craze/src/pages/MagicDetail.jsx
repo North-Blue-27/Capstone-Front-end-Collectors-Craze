@@ -261,6 +261,11 @@ const MagicDetail = () => {
               </div>
             )}
             <hr />
+            <div className="magic-detail-section-title">
+              <button className="btn btn-primary mr-2">Add to Favorites</button>
+              <button className="btn btn-danger">Remove from Favorites</button>
+            </div>
+            <hr />
           </div>
         </Col>
       </Row>

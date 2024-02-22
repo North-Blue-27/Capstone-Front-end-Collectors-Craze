@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import { RingLoader } from "react-spinners";
 
 const PokemonDetail = () => {
@@ -277,6 +277,15 @@ const PokemonDetail = () => {
                   </div>
                 </Col>
               </Row>
+            </div>
+            <hr />
+            <div className="favorites-buttons">
+              <Button variant="primary">
+                Add to Favorites
+              </Button>
+              <Button variant="danger">
+                Remove from Favorites
+              </Button>
             </div>
             <hr />
           </div>
