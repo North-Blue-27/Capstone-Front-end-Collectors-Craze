@@ -6,7 +6,8 @@
       "name": "Antonio",
       "surname": "Casalena",
       "username": "Anto27",
-      "id": 1
+      "id": 1,
+      "favorites": []
     },
     {
       "email": "piero@libero.it",
@@ -14,7 +15,8 @@
       "name": "Pierino",
       "surname": "Giorgi",
       "username": "Piegio12",
-      "id": 2
+      "id": 2,
+      "favorites": []
     },
     {
       "email": "aldoba@libero.it",
@@ -22,14 +24,24 @@
       "name": "Aldo",
       "surname": "Baglio",
       "username": "AldoBa1",
-      "id": 3
+      "id": 3,
+      "favorites": []
     },
     {
       "email": "anto@libero.it",
       "password": "$2a$10$kiqMsF308YDwb4k2wTjRN.AXhRryYYfw3PtTzgam01isIG28ENhHa",
       "name": "Antonio",
       "surname": "Casalena",
-      "id": 4
+      "id": 4,
+      "favorites": []
+    },
+    {
+      "email": "paolo@libero.it",
+      "password": "$2a$10$4y.qoB1W26O0nme84LUZdOlrMmnuXh7ocvBcc9m4O78PGMgkQeFs.",
+      "name": "paolo",
+      "surname": "ciao",
+      "id": 5,
+      "favorites": []
     }
   ]
 }

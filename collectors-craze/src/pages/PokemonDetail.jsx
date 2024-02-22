@@ -42,7 +42,9 @@ const PokemonDetail = () => {
 
     return (
       <>
-        <h3><strong>{label}</strong></h3>
+        <h3>
+          <strong>{label}</strong>
+        </h3>
         <div>{Array.isArray(value) ? value.join(", ") : value}</div>
       </>
     );
@@ -100,13 +102,14 @@ const PokemonDetail = () => {
                       </ul>
                     )
                   )}
-  
+
                   {pokemon.attacks && pokemon.attacks.length > 0 && (
                     <>
                       <h3>Attacks</h3>
                       {pokemon.attacks.map((attack, index) => (
                         <p key={index}>
-                          <strong>{attack.name}: {" "} </strong> {attack.text} DMG: {attack.damage}
+                          <strong>{attack.name}: </strong> {attack.text} DMG:{" "}
+                          {attack.damage}
                         </p>
                       ))}
                     </>
@@ -174,7 +177,7 @@ const PokemonDetail = () => {
                               {Object.entries(pokemon.tcgplayer.prices).map(
                                 ([type, price], index) => (
                                   <li key={index}>
-                                    <strong>{type}:</strong> 
+                                    <strong>{type}:</strong>
                                     <ul>
                                       <li>Low: {price.low}$</li>
                                       <li>Mid: {price.mid}$</li>
@@ -210,52 +213,62 @@ const PokemonDetail = () => {
                         <ul>
                           {pokemon.cardmarket.prices.lowPrice !== 0 && (
                             <li>
-                              <strong>Low Price:</strong> {pokemon.cardmarket.prices.lowPrice}€
+                              <strong>Low Price:</strong>{" "}
+                              {pokemon.cardmarket.prices.lowPrice}€
                             </li>
                           )}
                           {pokemon.cardmarket.prices.trendPrice !== 0 && (
                             <li>
-                              <strong>Trend Price:</strong> {pokemon.cardmarket.prices.trendPrice}€
+                              <strong>Trend Price:</strong>{" "}
+                              {pokemon.cardmarket.prices.trendPrice}€
                             </li>
                           )}
                           {pokemon.cardmarket.prices.avg1 !== 0 && (
                             <li>
-                              <strong>Average 1 day:</strong> {pokemon.cardmarket.prices.avg1}€
+                              <strong>Average 1 day:</strong>{" "}
+                              {pokemon.cardmarket.prices.avg1}€
                             </li>
                           )}
                           {pokemon.cardmarket.prices.avg7 !== 0 && (
                             <li>
-                              <strong>Average 7 days:</strong> {pokemon.cardmarket.prices.avg7}€
+                              <strong>Average 7 days:</strong>{" "}
+                              {pokemon.cardmarket.prices.avg7}€
                             </li>
                           )}
                           {pokemon.cardmarket.prices.avg30 !== 0 && (
                             <li>
-                              <strong>Average 30 days:</strong> {pokemon.cardmarket.prices.avg30}€
+                              <strong>Average 30 days:</strong>{" "}
+                              {pokemon.cardmarket.prices.avg30}€
                             </li>
                           )}
                           {pokemon.cardmarket.prices.reverseHoloLow !== 0 && (
                             <li>
-                              <strong>Reverse Holo Low:</strong> {pokemon.cardmarket.prices.reverseHoloLow}€
+                              <strong>Reverse Holo Low:</strong>{" "}
+                              {pokemon.cardmarket.prices.reverseHoloLow}€
                             </li>
                           )}
                           {pokemon.cardmarket.prices.reverseHoloTrend !== 0 && (
                             <li>
-                              <strong>Reverse Holo Trend:</strong> {pokemon.cardmarket.prices.reverseHoloTrend}€
+                              <strong>Reverse Holo Trend:</strong>{" "}
+                              {pokemon.cardmarket.prices.reverseHoloTrend}€
                             </li>
                           )}
                           {pokemon.cardmarket.prices.reverseHoloAvg1 !== 0 && (
                             <li>
-                              <strong>Reverse Holo Average 1 day:</strong> {pokemon.cardmarket.prices.reverseHoloAvg1}€
+                              <strong>Reverse Holo Average 1 day:</strong>{" "}
+                              {pokemon.cardmarket.prices.reverseHoloAvg1}€
                             </li>
                           )}
                           {pokemon.cardmarket.prices.reverseHoloAvg7 !== 0 && (
                             <li>
-                              <strong>Reverse Holo Average 7 days:</strong> {pokemon.cardmarket.prices.reverseHoloAvg7}€
+                              <strong>Reverse Holo Average 7 days:</strong>{" "}
+                              {pokemon.cardmarket.prices.reverseHoloAvg7}€
                             </li>
                           )}
                           {pokemon.cardmarket.prices.reverseHoloAvg30 !== 0 && (
                             <li>
-                              <strong>Reverse Holo Average 30 days:</strong> {pokemon.cardmarket.prices.reverseHoloAvg30}€
+                              <strong>Reverse Holo Average 30 days:</strong>{" "}
+                              {pokemon.cardmarket.prices.reverseHoloAvg30}€
                             </li>
                           )}
                         </ul>

@@ -19,7 +19,9 @@ const MagicDetail = () => {
       try {
         setLoading(true);
         // Richiesta per ottenere i dettagli della carta
-        const response = await axios.get(`https://api.scryfall.com/cards/${id}`);
+        const response = await axios.get(
+          `https://api.scryfall.com/cards/${id}`
+        );
         setCard(response.data);
         setLoading(false);
       } catch (error) {
@@ -63,7 +65,9 @@ const MagicDetail = () => {
     if (!text || !symbols) return null;
 
     text = text.replace(/\{([^}]+)\}/g, (match, symbol) => {
-      const symbolData = symbols.data.find((data) => data.symbol === `{${symbol}}`);
+      const symbolData = symbols.data.find(
+        (data) => data.symbol === `{${symbol}}`
+      );
       if (symbolData && symbolData.svg_uri) {
         return `<img src="${symbolData.svg_uri}" alt="${symbol}" style="width: 20px; height: 20px;" />`;
       }
@@ -88,15 +92,15 @@ const MagicDetail = () => {
       <Row>
         <Col md={4}>
           <div className="magic-image">
-          <img
-            src={
-              card.image_uris && card.image_uris.large
-                ? card.image_uris.large
-                : "placeholder.jpg"
-            }
-            alt={card.name}
-            className="img-fluid magic-image"
-          />
+            <img
+              src={
+                card.image_uris && card.image_uris.large
+                  ? card.image_uris.large
+                  : "placeholder.jpg"
+              }
+              alt={card.name}
+              className="img-fluid magic-image"
+            />
           </div>
         </Col>
         <Col md={8}>
