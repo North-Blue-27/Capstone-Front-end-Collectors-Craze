@@ -11,7 +11,11 @@ const favoriteReducer = (state = initialState, action) => {
         ...state,
         favorites: [
           ...state.favorites,
-          { gameName: action.payload.gameName, cardId: action.payload.cardId }
+          {
+            gameName: action.payload.gameName,
+            cardId: action.payload.cardId,
+            cardData: action.payload.cardData 
+          }
         ]
       };
     case REMOVE_FAVORITE:

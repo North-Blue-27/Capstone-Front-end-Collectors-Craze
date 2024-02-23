@@ -15,6 +15,7 @@ function Header() {
     surname: "",
     email: "",
     password: "",
+    favorites: [],
   });
 
   // Effetto che controlla se l'utente è già loggato al caricamento del componente

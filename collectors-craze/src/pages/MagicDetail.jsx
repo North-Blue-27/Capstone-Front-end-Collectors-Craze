@@ -3,25 +3,24 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { RingLoader } from "react-spinners";
+import { useDispatch, useSelector } from "react-redux";
+import { addFavorite, removeFavorite } from '../redux/favoriteActions';
 
 const MagicDetail = () => {
-  // Ottieni l'ID della carta dai parametri dell'URL
-  const { id } = useParams();
+  const dispatch = useDispatch();
+  const isAuthenticated = useSelector(state => state.user.isLoggedIn);
+  const userData = useSelector(state => state.user.userData);
 
-  // Dichiarazione degli stati
+  const { id } = useParams();
   const [card, setCard] = useState(null);
   const [symbols, setSymbols] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // Effetto per ottenere i dettagli della carta e i simboli
   useEffect(() => {
     const fetchCardDetails = async () => {
       try {
         setLoading(true);
-        // Richiesta per ottenere i dettagli della carta
-        const response = await axios.get(
-          `https://api.scryfall.com/cards/${id}`
-        );
+        const response = await axios.get(`https://api.scryfall.com/cards/${id}`);
         setCard(response.data);
         setLoading(false);
       } catch (error) {
@@ -32,7 +31,6 @@ const MagicDetail = () => {
 
     const fetchSymbols = async () => {
       try {
-        // Richiesta per ottenere i simboli delle carte
         const response = await axios.get("https://api.scryfall.com/symbology");
         setSymbols(response.data);
       } catch (error) {
@@ -40,12 +38,10 @@ const MagicDetail = () => {
       }
     };
 
-    // Esegui entrambe le richieste quando l'ID della carta cambia
     fetchCardDetails();
     fetchSymbols();
   }, [id]);
 
-  // Funzione per renderizzare il costo di mana
   const renderManaCost = (manaCost) => {
     if (!manaCost || !symbols) return null;
 
@@ -60,14 +56,11 @@ const MagicDetail = () => {
     return <span dangerouslySetInnerHTML={{ __html: manaCost }} />;
   };
 
-  // Funzione per renderizzare il testo dei simboli
   const renderSymbolText = (text) => {
     if (!text || !symbols) return null;
 
     text = text.replace(/\{([^}]+)\}/g, (match, symbol) => {
-      const symbolData = symbols.data.find(
-        (data) => data.symbol === `{${symbol}}`
-      );
+      const symbolData = symbols.data.find((data) => data.symbol === `{${symbol}}`);
       if (symbolData && symbolData.svg_uri) {
         return `<img src="${symbolData.svg_uri}" alt="${symbol}" style="width: 20px; height: 20px;" />`;
       }
@@ -77,7 +70,44 @@ const MagicDetail = () => {
     return <span dangerouslySetInnerHTML={{ __html: text }} />;
   };
 
-  // Rendering condizionale durante il caricamento
+  const handleAddToFavorites = () => {
+    if (card && isAuthenticated && userData) {
+      console.log("Adding to favorites:", card);
+      dispatch(addFavorite("Magic", card.id, card));
+      const updatedUser = {
+        ...userData,
+        favorites: [...userData.favorites, card.id]
+      };
+      console.log("Updated User:", updatedUser);
+      axios.patch(`http://localhost:3001/users/${userData.id}`, updatedUser) // Modifica il percorso del server
+        .then(response => {
+          console.log("User favorites updated:", response.data);
+        })
+        .catch(error => {
+          console.error("Error updating user favorites:", error);
+        });
+    } else {
+      console.error("Card, isAuthenticated, or userData is null or undefined.");
+    }
+  };
+
+  const handleRemoveFromFavorites = () => {
+    if (card && isAuthenticated) {
+      dispatch(removeFavorite("Magic", card.id));
+      const updatedUser = {
+        ...userData,
+        favorites: userData.favorites.filter(fav => fav !== card.id)
+      };
+      axios.patch(`http://localhost:3001/users/${userData.id}`, updatedUser) // Utilizza l'endpoint corretto
+        .then(response => {
+          console.log("User favorites updated:", response.data);
+        })
+        .catch(error => {
+          console.error("Error updating user favorites:", error);
+        });
+    }
+  };
+
   if (loading || !card || !symbols) {
     return (
       <div className="loading-container">
@@ -261,10 +291,12 @@ const MagicDetail = () => {
               </div>
             )}
             <hr />
-            <div className="magic-detail-section-title">
-              <button className="btn btn-primary mr-2">Add to Favorites</button>
-              <button className="btn btn-danger">Remove from Favorites</button>
-            </div>
+            {isAuthenticated && (
+        <div className="magic-detail-section-title">
+          <button className="btn btn-primary mr-2" onClick={handleAddToFavorites}>Add to Favorites</button>
+          <button className="btn btn-danger" onClick={handleRemoveFromFavorites}>Remove from Favorites</button>
+        </div>
+      )}
             <hr />
           </div>
         </Col>

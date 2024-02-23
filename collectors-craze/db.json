@@ -5,43 +5,50 @@
       "password": "$2a$10$Be5Z9Vd1O74DrWhG891h3eWSPYTouKITWMSbkrsHkqsImWnJNiTfa",
       "name": "Antonio",
       "surname": "Casalena",
-      "username": "Anto27",
-      "id": 1,
-      "favorites": []
+      "favorites": [],
+      "id": 1
     },
     {
       "email": "piero@libero.it",
       "password": "$2a$10$FAzRHUVM/1L2OceKXJSqie/tkMYdI5aBn1A85yopd5fcmAOWfV36W",
       "name": "Pierino",
       "surname": "Giorgi",
-      "username": "Piegio12",
-      "id": 2,
-      "favorites": []
+      "favorites": [],
+      "id": 2
     },
     {
       "email": "aldoba@libero.it",
       "password": "$2a$10$LfiYffHzfIGVgtWZ8wepJ.mTu9TRC/mBkoh7FewPO3yXB0B9mQNre",
       "name": "Aldo",
       "surname": "Baglio",
-      "username": "AldoBa1",
-      "id": 3,
-      "favorites": []
+      "favorites": [],
+      "id": 3
     },
     {
       "email": "anto@libero.it",
       "password": "$2a$10$kiqMsF308YDwb4k2wTjRN.AXhRryYYfw3PtTzgam01isIG28ENhHa",
       "name": "Antonio",
       "surname": "Casalena",
-      "id": 4,
-      "favorites": []
+      "favorites": [],
+      "id": 4
     },
     {
       "email": "paolo@libero.it",
       "password": "$2a$10$4y.qoB1W26O0nme84LUZdOlrMmnuXh7ocvBcc9m4O78PGMgkQeFs.",
       "name": "paolo",
       "surname": "ciao",
-      "id": 5,
-      "favorites": []
+      "favorites": [],
+      "id": 5
+    },
+    {
+      "email": "ugo@libero.it",
+      "password": "$2a$10$.fxkncekdroPgR9FQKo2IO/gEpq7ZyCjpzFyT0g7B/xXsdgmzgvt2",
+      "name": "Ugo",
+      "surname": "Tognazzi",
+      "favorites": [
+        "b3a69a1c-c80f-4413-a6fd-ae54cabbce28"
+      ],
+      "id": 6
     }
   ]
 }

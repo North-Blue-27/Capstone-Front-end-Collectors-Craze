@@ -1,11 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import userReducer from './userReducer'; // Importa il nuovo userReducer
+import userReducer from './userReducer';
+import favoriteReducer from './favoriteReducer';
 
 const store = configureStore({
   reducer: {
-    user: userReducer, // Aggiungi il nuovo userReducer come parte dello stato globale dello store
-    // Altri eventuali reducer possono essere aggiunti qui
-  },
+    user: userReducer,
+    favorites: favoriteReducer
+  }
 });
 
 export default store;
