@@ -4,12 +4,12 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { RingLoader } from "react-spinners";
 import { useDispatch, useSelector } from "react-redux";
-import { addFavorite, removeFavorite } from '../redux/favoriteActions';
+import { addFavorite, removeFavorite } from "../redux/favoriteActions";
 
 const MagicDetail = () => {
   const dispatch = useDispatch();
-  const isAuthenticated = useSelector(state => state.user.isLoggedIn);
-  const userData = useSelector(state => state.user.userData);
+  const isAuthenticated = useSelector((state) => state.user.isLoggedIn);
+  const userData = useSelector((state) => state.user.userData);
 
   const { id } = useParams();
   const [card, setCard] = useState(null);
@@ -20,7 +20,9 @@ const MagicDetail = () => {
     const fetchCardDetails = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`https://api.scryfall.com/cards/${id}`);
+        const response = await axios.get(
+          `https://api.scryfall.com/cards/${id}`
+        );
         setCard(response.data);
         setLoading(false);
       } catch (error) {
@@ -60,7 +62,9 @@ const MagicDetail = () => {
     if (!text || !symbols) return null;
 
     text = text.replace(/\{([^}]+)\}/g, (match, symbol) => {
-      const symbolData = symbols.data.find((data) => data.symbol === `{${symbol}}`);
+      const symbolData = symbols.data.find(
+        (data) => data.symbol === `{${symbol}}`
+      );
       if (symbolData && symbolData.svg_uri) {
         return `<img src="${symbolData.svg_uri}" alt="${symbol}" style="width: 20px; height: 20px;" />`;
       }
@@ -76,14 +80,15 @@ const MagicDetail = () => {
       dispatch(addFavorite("Magic", card.id, card));
       const updatedUser = {
         ...userData,
-        favorites: [...userData.favorites, card.id]
+        favorites: [...userData.favorites, card.id],
       };
       console.log("Updated User:", updatedUser);
-      axios.patch(`http://localhost:3001/users/${userData.id}`, updatedUser) // Modifica il percorso del server
-        .then(response => {
+      axios
+        .patch(`http://localhost:3001/users/${userData.id}`, updatedUser)
+        .then((response) => {
           console.log("User favorites updated:", response.data);
         })
-        .catch(error => {
+        .catch((error) => {
           console.error("Error updating user favorites:", error);
         });
     } else {
@@ -96,13 +101,14 @@ const MagicDetail = () => {
       dispatch(removeFavorite("Magic", card.id));
       const updatedUser = {
         ...userData,
-        favorites: userData.favorites.filter(fav => fav !== card.id)
+        favorites: userData.favorites.filter((fav) => fav !== card.id),
       };
-      axios.patch(`http://localhost:3001/users/${userData.id}`, updatedUser) // Utilizza l'endpoint corretto
-        .then(response => {
+      axios
+        .patch(`http://localhost:3001/users/${userData.id}`, updatedUser)
+        .then((response) => {
           console.log("User favorites updated:", response.data);
         })
-        .catch(error => {
+        .catch((error) => {
           console.error("Error updating user favorites:", error);
         });
     }
@@ -292,11 +298,21 @@ const MagicDetail = () => {
             )}
             <hr />
             {isAuthenticated && (
-        <div className="magic-detail-section-title">
-          <button className="btn btn-primary mr-2" onClick={handleAddToFavorites}>Add to Favorites</button>
-          <button className="btn btn-danger" onClick={handleRemoveFromFavorites}>Remove from Favorites</button>
-        </div>
-      )}
+              <div className="magic-detail-section-title">
+                <button
+                  className="btn btn-primary mr-2"
+                  onClick={handleAddToFavorites}
+                >
+                  Add to Favorites
+                </button>
+                <button
+                  className="btn btn-danger"
+                  onClick={handleRemoveFromFavorites}
+                >
+                  Remove from Favorites
+                </button>
+              </div>
+            )}
             <hr />
           </div>
         </Col>

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Form, FormControl, Button, Modal } from "react-bootstrap";
 import axios from "axios";
-import { useDispatch } from "react-redux"; // Importa useDispatch da react-redux
-import { loginUser } from "../redux/userReducer"; // Importa l'azione loginUser dal tuo reducer
+import { useDispatch } from "react-redux";
+import { loginUser } from "../redux/userReducer";
 
 function Header() {
   const dispatch = useDispatch();
@@ -59,7 +59,7 @@ function Header() {
   // Gestisce la richiesta di login dell'utente
 const handleLogin = async () => {
   try {
-    console.log("Login in corso:", userData); // Stampa i dati dell'utente prima del login
+    console.log("Login in corso:", userData);
     const response = await axios.post(
       "http://localhost:3001/login",
       userData
@@ -71,7 +71,7 @@ const handleLogin = async () => {
     setIsLoggedIn(true);
     setShowModal(false);
     setUserData({ email: "", password: "" });
-    console.log("Nuovi dati utente dopo il login:", user); // Stampa i nuovi dati dell'utente dopo il login
+    console.log("Nuovi dati utente dopo il login:", user);
   } catch (error) {
     console.error("Errore durante il login:", error);
     if (error.response && error.response.status === 400) {
