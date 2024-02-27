@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { RingLoader } from "react-spinners";
 import { useDispatch, useSelector } from "react-redux";
-import { addFavorite, removeFavorite } from "../redux/favoriteActions";
+import { updateUserData } from "../redux/userReducer";
 
 const MagicDetail = () => {
   const dispatch = useDispatch();
@@ -15,6 +15,7 @@ const MagicDetail = () => {
   const [card, setCard] = useState(null);
   const [symbols, setSymbols] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [isCardInFavorites, setIsCardInFavorites] = useState(false);
 
   useEffect(() => {
     const fetchCardDetails = async () => {
@@ -43,6 +44,10 @@ const MagicDetail = () => {
     fetchCardDetails();
     fetchSymbols();
   }, [id]);
+
+  useEffect(() => {
+    setIsCardInFavorites(userData?.favorites.includes(id));
+  }, [userData, id]);
 
   const renderManaCost = (manaCost) => {
     if (!manaCost || !symbols) return null;
@@ -75,22 +80,23 @@ const MagicDetail = () => {
   };
 
   const handleAddToFavorites = () => {
-    if (card && isAuthenticated && userData) {
-      console.log("Adding to favorites:", card);
-      dispatch(addFavorite("Magic", card.id, card));
+    if (card && isAuthenticated && userData && !isCardInFavorites) {
+      
       const updatedUser = {
         ...userData,
-        favorites: [...userData.favorites, card.id],
+        favorites: [...userData.favorites, {cardId: card.id, gameName:"magic", cardData: card}],
       };
-      console.log("Updated User:", updatedUser);
       axios
         .patch(`http://localhost:3001/users/${userData.id}`, updatedUser)
         .then((response) => {
+          dispatch(updateUserData(updatedUser));
           console.log("User favorites updated:", response.data);
         })
         .catch((error) => {
           console.error("Error updating user favorites:", error);
         });
+    } else if (isCardInFavorites) {
+      console.log("Questa carta è già nei tuoi preferiti.");
     } else {
       console.error("Card, isAuthenticated, or userData is null or undefined.");
     }
@@ -98,14 +104,14 @@ const MagicDetail = () => {
 
   const handleRemoveFromFavorites = () => {
     if (card && isAuthenticated) {
-      dispatch(removeFavorite("Magic", card.id));
       const updatedUser = {
         ...userData,
-        favorites: userData.favorites.filter((fav) => fav !== card.id),
+        favorites: userData.favorites.filter((fav) => fav.cardId !== card.id),
       };
       axios
         .patch(`http://localhost:3001/users/${userData.id}`, updatedUser)
         .then((response) => {
+          dispatch(updateUserData(updatedUser));
           console.log("User favorites updated:", response.data);
         })
         .catch((error) => {
@@ -122,7 +128,6 @@ const MagicDetail = () => {
       </div>
     );
   }
-
   return (
     <Container fluid className="magic-detail-container">
       <Row>
@@ -298,15 +303,15 @@ const MagicDetail = () => {
             )}
             <hr />
             {isAuthenticated && (
-              <div className="magic-detail-section-title">
+              <div className="magic-detail-favorites-button">
                 <button
-                  className="btn btn-primary mr-2"
+                  className="btn btn-outline-success"
                   onClick={handleAddToFavorites}
                 >
                   Add to Favorites
                 </button>
                 <button
-                  className="btn btn-danger"
+                  className="btn btn-outline-danger"
                   onClick={handleRemoveFromFavorites}
                 >
                   Remove from Favorites

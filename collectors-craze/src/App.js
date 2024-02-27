@@ -10,6 +10,7 @@ import Magic from './pages/Magic';
 import YuGiOh from './pages/YuGiOh';
 import PokemonDetail from './pages/PokemonDetail';
 import MagicDetail from './pages/MagicDetail';
+import UserPersonalPage from './pages/UserPersonalPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/magic" element={<Magic />} />
         <Route path="/magic/:id" element={<MagicDetail />} />
         <Route path="/YuGiOh" element={<YuGiOh />} />
+        <Route path="/user" element={<UserPersonalPage />} />
       </Routes>
       <Footer />
     </Router>

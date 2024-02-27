@@ -3,9 +3,12 @@ import { Navbar, Form, FormControl, Button, Modal } from "react-bootstrap";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../redux/userReducer";
+import { useNavigate } from "react-router-dom"; // Utilizziamo useNavigate per il reindirizzamento
 
 function Header() {
   const dispatch = useDispatch();
+  const navigate = useNavigate(); // Inizializziamo useNavigate per il reindirizzamento
+
   // Definizione dello stato locale del componente
   const [showModal, setShowModal] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -21,10 +24,12 @@ function Header() {
   // Effetto che controlla se l'utente è già loggato al caricamento del componente
   useEffect(() => {
     const token = localStorage.getItem("token");
+    console.log("Token salvato nel localStorage:", token);
     if (token) {
       setIsLoggedIn(true);
     }
   }, []);
+  
 
   // Gestisce il cambiamento dei valori degli input nell'area di registrazione o login
   const handleInputChange = (event, isRegistration) => {
@@ -57,35 +62,41 @@ function Header() {
   };
 
   // Gestisce la richiesta di login dell'utente
-const handleLogin = async () => {
-  try {
-    console.log("Login in corso:", userData);
-    const response = await axios.post(
-      "http://localhost:3001/login",
-      userData
-    );
-    console.log("Login avvenuto con successo:", response.data);
-    const { accessToken, user } = response.data; // Estrae il token di accesso dalla risposta
-    localStorage.setItem("token", accessToken); // Memorizza il token nel localStorage
-    dispatch(loginUser(user)); // Dispatcha l'azione loginUser con i dati dell'utente
-    setIsLoggedIn(true);
-    setShowModal(false);
-    setUserData({ email: "", password: "" });
-    console.log("Nuovi dati utente dopo il login:", user);
-  } catch (error) {
-    console.error("Errore durante il login:", error);
-    if (error.response && error.response.status === 400) {
-      alert("Credenziali non valide. Riprova.");
-    } else {
-      alert("Si è verificato un errore durante il login. Riprova più tardi.");
+  const handleLogin = async () => {
+    try {
+      console.log("Login in corso:", userData);
+      const response = await axios.post(
+        "http://localhost:3001/login",
+        userData
+      );
+      console.log("Login avvenuto con successo:", response.data);
+      const { accessToken, user } = response.data;
+      localStorage.setItem("token", accessToken);
+      dispatch(loginUser(user));
+      setIsLoggedIn(true);
+      setShowModal(false);
+      setUserData({ email: "", password: "" });
+      console.log("Nuovi dati utente dopo il login:", user);
+    } catch (error) {
+      console.error("Errore durante il login:", error);
+      if (error.response && error.response.status === 400) {
+        alert("Credenziali non valide. Riprova.");
+      } else {
+        alert("Si è verificato un errore durante il login. Riprova più tardi.");
+      }
     }
-  }
-};
+  };
 
   // Gestisce il logout dell'utente
   const handleLogout = () => {
+    console.log("Funzione di logout chiamata");
     localStorage.removeItem("token");
     setIsLoggedIn(false);
+  };
+
+  // Funzione per gestire il reindirizzamento alla pagina personale dell'utente
+  const goToMyPage = () => {
+    navigate("/user");
   };
 
   return (
@@ -118,13 +129,22 @@ const handleLogin = async () => {
               </>
             )}
             {isLoggedIn ? (
-              <Button
-                variant="outline-light"
-                className="mr-2"
-                onClick={handleLogout}
-              >
-                Logout
-              </Button>
+              <>
+                <Button
+                  variant="outline-light"
+                  className="mr-2"
+                  onClick={goToMyPage}
+                >
+                  My Page
+                </Button>
+                <Button
+                  variant="outline-light"
+                  className="mr-2"
+                  onClick={handleLogout}
+                >
+                  Logout
+                </Button>
+              </>
             ) : (
               <>
                 <Button

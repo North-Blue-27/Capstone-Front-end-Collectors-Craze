@@ -205,6 +205,11 @@
 .prices-section ul li strong {
   font-weight: bold;
 }
+.pokemon-detail-favorites-buttons button {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+
+}
 
 /**** MAGIC-PAGE ****/
 
@@ -278,4 +283,26 @@
 
 .magic-image {
   margin-bottom: 1.5rem;
+}
+.magic-detail-favorites-button button {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+
+/****  PERSONAL PAGE ****/
+
+.user-page-container {
+  background-image: url('/public/images/pokemon-background.png');
+  background-size: auto;
+  background-position: center;
+  background-color: #232323;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  min-height: 100vh;
+  color: white;
+}
+.user-page-card {
+  background-color: transparent !important;
+  color: white !important;
 }

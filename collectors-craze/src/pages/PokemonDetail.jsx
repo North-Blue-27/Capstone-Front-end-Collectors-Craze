@@ -2,15 +2,18 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import { RingLoader } from "react-spinners";
+import { useDispatch, useSelector } from "react-redux";
+import axios from 'axios';
+import { updateUserData } from "../redux/userReducer";
 
 const PokemonDetail = () => {
-  // Ottiene l'ID del Pokémon dalla URL
   const { id } = useParams();
-  // Stati per memorizzare i dettagli del Pokémon e lo stato di caricamento
+  const dispatch = useDispatch();
+  const isAuthenticated = useSelector(state => state.user.isLoggedIn);
+  const userData = useSelector(state => state.user.userData);
   const [pokemon, setPokemon] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Effetto per recuperare i dettagli del Pokémon quando l'ID cambia
   useEffect(() => {
     const fetchPokemonDetail = async () => {
       try {
@@ -34,6 +37,46 @@ const PokemonDetail = () => {
     fetchPokemonDetail();
   }, [id]);
 
+  const handleAddToFavorites = () => {
+    if (pokemon && isAuthenticated && userData) {
+      const updatedUser = {
+        ...userData,
+        favorites: [...userData.favorites, {cardId: pokemon.id, gameName:"pokemon", cardData: pokemon}],
+      };
+      axios
+        .patch(`http://localhost:3001/users/${userData.id}`, updatedUser)
+        .then((response) => {
+          dispatch(updateUserData(updatedUser));
+          console.log("User favorites updated:", response.data);
+        })
+        .catch((error) => {
+          console.error("Error updating user favorites:", error);
+        });
+    } else {
+      console.error("Pokemon, isAuthenticated, or userData is null or undefined.");
+    }
+  };
+
+  const handleRemoveFromFavorites = () => {
+    if (pokemon && isAuthenticated && userData) {
+      const updatedUser = {
+        ...userData,
+        favorites: userData.favorites.filter(fav => fav.cardId !== pokemon.id),
+      };
+      axios
+        .patch(`http://localhost:3001/users/${userData.id}`, updatedUser)
+        .then(response => {
+          dispatch(updateUserData(updatedUser));
+          console.log("User favorites updated:", response.data);
+        })
+        .catch(error => {
+          console.error("Error updating user favorites:", error);
+        });
+    } else {
+      console.error("Pokemon, isAuthenticated, or userData is null or undefined.");
+    }
+  };
+
   // Funzione per rendere un campo di dettaglio
   const renderField = (label, value) => {
     if (!value || (Array.isArray(value) && value.length === 0)) {
@@ -50,7 +93,6 @@ const PokemonDetail = () => {
     );
   };
 
-  // Se il caricamento è ancora in corso, visualizza il loader
   if (loading) {
     return (
       <div className="loading-container">
@@ -60,7 +102,6 @@ const PokemonDetail = () => {
     );
   }
 
-  // Se non ci sono dettagli del Pokémon, visualizza "Loading..."
   if (!pokemon) {
     return <div>Loading...</div>;
   }
@@ -279,14 +320,16 @@ const PokemonDetail = () => {
               </Row>
             </div>
             <hr />
-            <div className="favorites-buttons">
-              <Button variant="primary">
-                Add to Favorites
-              </Button>
-              <Button variant="danger">
-                Remove from Favorites
-              </Button>
-            </div>
+            {isAuthenticated && (
+              <div className="pokemon-detail-favorites-buttons">
+                <Button variant="outline-success" onClick={handleAddToFavorites}>
+                  Add to Favorites
+                </Button>
+                <Button variant="outline-danger" onClick={handleRemoveFromFavorites}>
+                  Remove from Favorites
+                </Button>
+              </div>
+            )}
             <hr />
           </div>
         </Col>
