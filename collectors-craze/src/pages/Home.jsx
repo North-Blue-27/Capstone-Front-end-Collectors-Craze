@@ -31,13 +31,6 @@ function Home() {
             </Card>
           </Link>
         </Col>
-        <Col xs={12} sm={6} md={5} lg={4} className="d-flex align-items-center justify-content-center mb-3">
-          <Link to="/yugioh">
-            <Card className="custom-card">
-              <Card.Img variant="top" src="/images/yugioh-logo.png" className="custom-img" />
-            </Card>
-          </Link>
-        </Col>
       </Row>
     </div>
   );

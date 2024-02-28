@@ -3,21 +3,19 @@ import axios from "axios";
 import { RingLoader } from "react-spinners";
 import { Pagination, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import PokemonTools from "../components/PokemonTools"; 
+import PokemonTools from "../components/PokemonTools";
 
 const Pokemon = () => {
-  // Definizione degli stati
-  const [latestSet, setLatestSet] = useState(null);
-  const [cards, setCards] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [totalPages, setTotalPages] = useState(1);
-  const [searchTotalPages, setSearchTotalPages] = useState(1);
-  const [searched, setSearched] = useState(false); 
-  const [pageTitle, setPageTitle] = useState(`Latest Pokemon Set: Loading...`);
+  const [pokemonData, setPokemonData] = useState({
+    latestSet: null,
+    cards: [],
+    loading: true,
+    error: null,
+    searchTerm: "",
+    totalPages: 1,
+    currentPage: 1,
+  });
 
-  // Effetto per caricare l'ultimo set di Pokémon al caricamento della pagina
   useEffect(() => {
     const fetchLatestSet = async () => {
       try {
@@ -35,20 +33,151 @@ const Pokemon = () => {
         );
 
         const latestSetData = latestSetResponse.data.data[0];
-        setLatestSet(latestSetData);
-        setPageTitle(`Latest Pokemon Set: ${latestSetData.name}`);
+        setPokemonData((prevState) => ({
+          ...prevState,
+          latestSet: latestSetData,
+        }));
         fetchCards(latestSetData.id, 1);
       } catch (error) {
         console.error("Error fetching latest set:", error);
-        setError("An error occurred while fetching data.");
-        setLoading(false);
+        setPokemonData((prevState) => ({
+          ...prevState,
+          error: "An error occurred while fetching data.",
+          loading: false,
+        }));
       }
     };
 
     fetchLatestSet();
   }, []);
 
-  // Funzione per costruire la query di ricerca
+  const fetchCards = async (setId, page) => {
+    try {
+      const cardsResponse = await axios.get(
+        `https://api.pokemontcg.io/v2/cards`,
+        {
+          params: {
+            q: `set.id:${setId}`,
+            pageSize: 30,
+            page,
+          },
+          headers: {
+            "X-Api-Key": process.env.REACT_APP_POKEMON_API_KEY,
+          },
+        }
+      );
+
+      const { data, totalCount } = cardsResponse.data;
+      setPokemonData((prevState) => ({
+        ...prevState,
+        cards: data,
+        totalPages: Math.ceil(totalCount / 30),
+        loading: false,
+        currentPage: page,
+      }));
+    } catch (error) {
+      console.error("Error fetching cards:", error);
+      setPokemonData((prevState) => ({
+        ...prevState,
+        error: "An error occurred while fetching data.",
+        loading: false,
+      }));
+    }
+  };
+
+  const handleSearch = async () => {
+    const { searchTerm } = pokemonData;
+    if (!searchTerm) {
+      return;
+    }
+
+    setPokemonData((prevState) => ({
+      ...prevState,
+      loading: true,
+      currentPage: 1,
+    }));
+
+    try {
+      const query = buildSearchQuery(searchTerm);
+      const cardsResponse = await axios.get(
+        `https://api.pokemontcg.io/v2/cards`,
+        {
+          params: {
+            q: query,
+            pageSize: 30,
+            page: 1,
+          },
+          headers: {
+            "X-Api-Key": process.env.REACT_APP_POKEMON_API_KEY,
+          },
+        }
+      );
+
+      const { data, totalCount } = cardsResponse.data;
+      setPokemonData((prevState) => ({
+        ...prevState,
+        cards: data,
+        totalPages: Math.ceil(totalCount / 30),
+        loading: false,
+      }));
+    } catch (error) {
+      console.error("Error searching for cards:", error);
+      setPokemonData((prevState) => ({
+        ...prevState,
+        error: "An error occurred while fetching data.",
+        loading: false,
+      }));
+    }
+  };
+
+  const handlePageChange = async (page) => {
+    const { latestSet } = pokemonData;
+    setPokemonData((prevState) => ({
+      ...prevState,
+      loading: true,
+    }));
+    await fetchCards(latestSet.id, page);
+  };
+
+  const handleSearchPageChange = async (page) => {
+    setPokemonData((prevState) => ({
+      ...prevState,
+      loading: true,
+    }));
+    try {
+      const { searchTerm } = pokemonData;
+      const query = buildSearchQuery(searchTerm);
+      const cardsResponse = await axios.get(
+        `https://api.pokemontcg.io/v2/cards`,
+        {
+          params: {
+            q: query,
+            pageSize: 30,
+            page,
+          },
+          headers: {
+            "X-Api-Key": process.env.REACT_APP_POKEMON_API_KEY,
+          },
+        }
+      );
+
+      const { data } = cardsResponse.data;
+      setPokemonData((prevState) => ({
+        ...prevState,
+        cards: data,
+        loading: false,
+        currentPage: page,
+      }));
+    } catch (error) {
+      console.error("Error fetching search results:", error);
+      setPokemonData((prevState) => ({
+        ...prevState,
+        error: "An error occurred while fetching data.",
+        loading: false,
+      }));
+    }
+  };
+
   const buildSearchQuery = (searchTerm) => {
     const keywords = searchTerm.split(" ");
 
@@ -67,113 +196,16 @@ const Pokemon = () => {
     return query;
   };
 
-  // Funzione per recuperare le carte in base all'ID del set
-  const fetchCards = async (setId, page) => {
-    try {
-      const cardsResponse = await axios.get(
-        `https://api.pokemontcg.io/v2/cards`,
-        {
-          params: {
-            q: `set.id:${setId}`,
-            pageSize: 30,
-            page,
-          },
-          headers: {
-            "X-Api-Key": process.env.REACT_APP_POKEMON_API_KEY,
-          },
-        }
-      );
+  const {
+    latestSet,
+    cards,
+    loading,
+    error,
+    searchTerm,
+    totalPages,
+    currentPage,
+  } = pokemonData;
 
-      const { data, totalCount } = cardsResponse.data;
-      setCards(data);
-      setTotalPages(Math.ceil(totalCount / 30));
-      setLoading(false);
-    } catch (error) {
-      console.error("Error fetching cards:", error);
-      setError("An error occurred while fetching data.");
-      setLoading(false);
-    }
-  };
-
-  // Funzione per gestire la ricerca
-  const handleSearch = async () => {
-    if (!searchTerm) {
-      return;
-    }
-
-    setLoading(true);
-    setSearched(true);
-    try {
-      const query = buildSearchQuery(searchTerm);
-
-      const cardsResponse = await axios.get(
-        `https://api.pokemontcg.io/v2/cards`,
-        {
-          params: {
-            q: query,
-            pageSize: 30,
-            page: 1,
-          },
-          headers: {
-            "X-Api-Key": process.env.REACT_APP_POKEMON_API_KEY,
-          },
-        }
-      );
-
-      const { data, totalCount } = cardsResponse.data;
-      setCards(data);
-      setSearchTotalPages(Math.ceil(totalCount / 30));
-      setLoading(false);
-      if (data.length === 0) {
-        setPageTitle(`No results found for: "${searchTerm}"`);
-      } else {
-        setPageTitle(`Search Result For: "${searchTerm}"`);
-      }
-    } catch (error) {
-      console.error("Error searching for cards:", error);
-      setError("An error occurred while fetching data.");
-      setLoading(false);
-      setPageTitle(`No results found for: "${searchTerm}"`);
-    }
-  };
-
-  // Funzione per gestire il cambio di pagina
-  const handlePageChange = async (page) => {
-    setLoading(true);
-    await fetchCards(latestSet.id, page);
-  };
-
-  // Funzione per gestire il cambio di pagina della ricerca
-  const handleSearchPageChange = async (page) => {
-    setLoading(true);
-    try {
-      const query = buildSearchQuery(searchTerm);
-
-      const cardsResponse = await axios.get(
-        `https://api.pokemontcg.io/v2/cards`,
-        {
-          params: {
-            q: query,
-            pageSize: 30,
-            page,
-          },
-          headers: {
-            "X-Api-Key": process.env.REACT_APP_POKEMON_API_KEY,
-          },
-        }
-      );
-
-      const { data } = cardsResponse.data;
-      setCards(data);
-      setLoading(false);
-    } catch (error) {
-      console.error("Error fetching search results:", error);
-      setError("An error occurred while fetching data.");
-      setLoading(false);
-    }
-  };
-
-  // Controlli per il caricamento e la gestione degli errori
   if (loading) {
     return (
       <div className="loading-container">
@@ -187,28 +219,42 @@ const Pokemon = () => {
     return <div>Error: {error}</div>;
   }
 
+  const pageTitle = latestSet
+    ? `Latest Pokemon Set: ${latestSet.name}`
+    : "Latest Pokemon Set: Loading...";
+  const searched = searchTerm !== "";
 
   return (
     <div className="pokemon-page">
-      <PokemonTools
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-        handleSearch={handleSearch}
-      />
+      <div className="pokemon-header">
+        <h1>Welcome to the Pokémon Page</h1>
+        <h2>
+          Search any card, get updated details and prices,<br />
+          and create a list of your favorites
+        </h2>
+      </div>
+      <div className="search-pokemon"> {/* Aggiungi la classe search-pokemon */}
+        <PokemonTools
+          searchTerm={searchTerm}
+          setSearchTerm={(term) =>
+            setPokemonData((prevState) => ({
+              ...prevState,
+              searchTerm: term,
+            }))
+          }
+          handleSearch={handleSearch}
+        />
+      </div>
       <h1 className="pokemon-title">
-        {pageTitle.split(":").map((part, index) =>
-          index === 0 ? (
-            <span key={index}>{part}:</span>
-          ) : (
-            <span key={index} style={{ color: "red" }}>
-              {part}
-            </span>
-          )
-        )}
+        {pageTitle.split(":").map((part, index) => (
+          <span key={index} style={{ color: index === 1 ? "red" : "inherit" }}>
+            {part}
+          </span>
+        ))}
       </h1>
       <div className="card-container">
-        <Row xs={1} sm={2} md={3} lg={5}>
-          {cards.map((card, index) => (
+        <Row xs={1} sm={2} md={4} lg={6}>
+          {cards.map((card) => (
             <Col key={card.id} className="center-content">
               <Link to={`/pokemon/${card.id}`}>
                 <div className="card">
@@ -219,27 +265,33 @@ const Pokemon = () => {
           ))}
         </Row>
       </div>
-      <Pagination className="pagination-pokemon">
-        {searched
-          ? Array.from({ length: searchTotalPages }, (_, i) => i + 1).map(
-              (page) => (
-                <Pagination.Item
-                  key={page}
-                  onClick={() => handleSearchPageChange(page)}
-                >
-                  {page}
-                </Pagination.Item>
+      <div className="pagination-container">
+        <Pagination className="pagination-pokemon pagination-md">
+          {searched
+            ? Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                (page) => (
+                  <Pagination.Item
+                    key={page}
+                    onClick={() => handleSearchPageChange(page)}
+                    active={currentPage === page}
+                  >
+                    {page}
+                  </Pagination.Item>
+                )
               )
-            )
-          : Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-              <Pagination.Item
-                key={page}
-                onClick={() => handlePageChange(page)}
-              >
-                {page}
-              </Pagination.Item>
-            ))}
-      </Pagination>
+            : Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                (page) => (
+                  <Pagination.Item
+                    key={page}
+                    onClick={() => handlePageChange(page)}
+                    active={currentPage === page}
+                  >
+                    {page}
+                  </Pagination.Item>
+                )
+              )}
+        </Pagination>
+      </div>
     </div>
   );
 };

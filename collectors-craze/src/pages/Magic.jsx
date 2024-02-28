@@ -7,22 +7,23 @@ import {
   Card,
   Dropdown,
   Button,
+  Pagination,
 } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { RingLoader } from "react-spinners";
 
 const Magic = () => {
-  // Dichiarazione degli stati
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [sets, setSets] = useState([]);
   const [foundCardIds, setFoundCardIds] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [cardsPerPage] = useState(30);
 
-  const navigate = useNavigate(); // Hook per la navigazione
+  const navigate = useNavigate();
 
-  // Effetto per ottenere i set disponibili all'avvio
   useEffect(() => {
     const fetchSets = async () => {
       try {
@@ -40,7 +41,6 @@ const Magic = () => {
     fetchSets();
   }, []);
 
-  // Funzione per gestire la ricerca delle carte
   const handleSearch = async () => {
     try {
       setLoading(true);
@@ -68,7 +68,6 @@ const Magic = () => {
     }
   };
 
-  // Funzione per gestire la selezione di un set
   const handleSetSelect = async (setCode) => {
     try {
       setLoading(true);
@@ -95,17 +94,22 @@ const Magic = () => {
     }
   };
 
-  // Funzione per gestire il click su una carta
   const handleCardClick = (card) => {
     navigate(`/magic/${card.id}`);
   };
 
-  // Funzione per gestire il cambiamento dell'input di ricerca
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
   };
 
-  // Rendering condizionale durante il caricamento
+  // Calcola l'indice della prima carta della pagina corrente
+  const indexOfLastCard = currentPage * cardsPerPage;
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+  const currentCards = searchResults.slice(indexOfFirstCard, indexOfLastCard);
+
+  // Cambia pagina
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   if (loading) {
     return (
       <div className="loading-container">
@@ -117,60 +121,66 @@ const Magic = () => {
 
   return (
     <Container fluid className="magic-page">
-      <Row className="py-4">
-        <Col>
-          <div className="header-content">
-            <h1>Benvenuto in Magic: The Gathering</h1>
-            <h2>Cerca le tue carte preferite</h2>
-          </div>
-        </Col>
-      </Row>
-      <Row className="py-4">
-        <Col className="search-col">
-          <FormControl
-            className="search-input"
-            placeholder="Search for a card..."
-            value={searchTerm}
-            onChange={handleInputChange}
-          />
-        </Col>
-        <Col xs="auto">
-          <Button
-            variant="outline-light"
-            onClick={handleSearch}
-            className="search-btn"
-          >
-            Search
-          </Button>
-        </Col>
-        <Col xs="auto">
-          <Dropdown>
-            <Dropdown.Toggle
-              variant="outline-warning"
-              id="dropdown-basic"
-              className="select-set-toggle"
+      <div className="header-content">
+        <h1>Welcome to Magic The Gathering Page</h1>
+        <h2>
+          Search any card or set, get updated details and prices,
+          <br />
+          and create a list of your favorites
+        </h2>
+      </div>
+      <div className="search-bar-container">
+        <Row className="mb-3 search-pokemon">
+          <Col md={8}>
+            <FormControl
+              className="search-bar"
+              placeholder="Search for a card..."
+              value={searchTerm}
+              onChange={handleInputChange}
+            />
+          </Col>
+          <Col md={2}>
+            <Button
+              variant="outline-light"
+              onClick={handleSearch}
+              className="button-search"
             >
-              Select Set
-            </Dropdown.Toggle>
-            <Dropdown.Menu
-              style={{ width: "20rem", maxHeight: "70vh", overflowY: "auto" }}
-              className="custom-dropdown-menu"
-            >
-              {sets.map((set) => (
-                <Dropdown.Item
-                  key={set.code}
-                  onClick={() => handleSetSelect(set.code)}
-                  className="set-item"
-                >
-                  {set.name}
-                </Dropdown.Item>
-              ))}
-            </Dropdown.Menu>
-          </Dropdown>
-        </Col>
-      </Row>
+              Search
+            </Button>
+          </Col>
+          <Col md={1}>
+            <Dropdown>
+              <Dropdown.Toggle
+                variant="outline-warning"
+                id="dropdown-basic"
+                className="select-set-toggle"
+              >
+                Select Set
+              </Dropdown.Toggle>
+              <Dropdown.Menu
+                style={{
+                  width: "20rem",
+                  maxHeight: "70vh",
+                  overflowY: "auto",
+                }}
+                className="custom-dropdown-menu"
+              >
+                {sets.map((set) => (
+                  <Dropdown.Item
+                    key={set.code}
+                    onClick={() => handleSetSelect(set.code)}
+                    className="set-item"
+                  >
+                    {set.name}
+                  </Dropdown.Item>
+                ))}
+              </Dropdown.Menu>
+            </Dropdown>
+          </Col>
+        </Row>
+      </div>
       <Row>
-        {searchResults.map((result, index) => (
+        {currentCards.map((result, index) => (
           <Col key={index} xs={12} sm={6} md={4} lg={3} xl={2}>
             <Card
               className="mb-3 result-card"
@@ -193,6 +203,15 @@ const Magic = () => {
           </Col>
         ))}
       </Row>
+      <div className="pagination-container">
+      <Pagination className="pagination-magic">
+        {Array.from({ length: Math.ceil(searchResults.length / cardsPerPage) }, (_, i) => (
+          <Pagination.Item key={i + 1} onClick={() => paginate(i + 1)}>
+            {i + 1}
+          </Pagination.Item>
+        ))}
+      </Pagination>
+      </div>
     </Container>
   );
 };

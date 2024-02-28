@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+/*import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, FormControl, Card, Dropdown, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -134,4 +134,4 @@ const YuGiOh = () => {
     );
 };
 
-export default YuGiOh;
+export default YuGiOh;*/

@@ -19,6 +19,19 @@
     margin-bottom: 1vh;
   }
 }
+.user-page-button {
+  margin-right: 1rem;
+  margin-left: 0.5rem;
+}
+@media (min-width: 950px) {
+  .user-page-button {
+    margin-left: 30rem !important;
+  }
+}
+
+
+
+
 /**** HOME PAGE ****/
 .home-container {
   background-color: black;
@@ -73,12 +86,17 @@
 }
 
 
+
+
 /**** FOOTER ****/
 .footer {
   margin-top: auto;
   background-color: black;
   background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
 }
+
+
+
 
 /**** POKEMON PAGE****/
 .pokemon-page {
@@ -89,9 +107,28 @@
   padding-left: 1rem;
   padding-right: 1rem;
   min-height: 100vh;
+  padding-top: 2rem;
+}
+.pokemon-header {
+  color: white;
+  text-align: center;
+  border: 1px solid white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.pokemon-header h1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: red;
 }
 .pokemon-title {
-  color: white; /* Testo bianco fino ai : */
+  color: white;
+}
+.search-pokemon {
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .card {
@@ -124,13 +161,47 @@
 
 }
 .pagination-pokemon {
-  padding-bottom: 1rem ;
+  padding-bottom: 1rem;
   padding-top: 1rem;
   margin-bottom: 0;
   
 }
-/**** POKEMON-DETAIL ****/
+.pagination-pokemon .page-link {
+  background-color: transparent;
+  border: 2px solid #007bff;
+  color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  margin-right: 0.5rem;
+}
+@media (max-width: 576px) {
+  .pagination-pokemon .page-link {
+    margin-right: 0.4rem;
+  }
+}
 
+.pagination-pokemon .page-link:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+.pagination-pokemon .page-item.active .page-link {
+  background-color:white;
+  color: #007bff
+}
+
+.search-pokemon {
+  padding-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .button-search {
+    margin-top: 0.5rem !important;
+  }
+}
+
+
+
+/**** POKEMON-DETAIL ****/
 .details-container h2,
 .details-container h3 {
   font-family: 'Arial', sans-serif;
@@ -211,35 +282,48 @@
 
 }
 
-/**** MAGIC-PAGE ****/
 
+
+/**** MAGIC-PAGE ****/
 .magic-page {
-  min-height: 100vh;
+  min-height: 150vh;
   background-image: url('/public/images/pokemon-background.png');
   background-color: #232323;
+  padding-top: 2rem;
 }
 .header-content {
   color: white;
   text-align: center;
+  border: 1px solid white;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.header-content h1 {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  color: red;
 }
 
-.result-card {
-  background-color: transparent !important;
-  color: white !important;
+.search-bar-container {
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-.loading-container-magic {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #202124;
-  color: white;
+.custom-dropdown-menu {
+  width: 20rem;
+  max-height: 50vh; /* Imposta l'altezza massima del menu */
+  overflow-y: auto; /* Aggiungi scorrimento verticale se necessario */
+  position: relative; /* Imposta la posizione relativa */
 }
-.custom-dropdown-menu .set-item:hover {
+
+.set-item:hover {
   background-color: slategray;
   color: white;
 }
+
 @media (max-width: 768px) {
   .custom-dropdown-menu {
       width: 15rem !important;
@@ -254,9 +338,49 @@
 }
 
 
+.result-card {
+  background-color: transparent !important;
+  color: white !important;
+}
+.pagination-container {
+  display: flex;
+  justify-content: center;
+}
+.pagination-magic {
+  padding-bottom: 1rem ;
+  padding-top: 1rem;
+  margin-bottom: 0;
+  
+}
+.pagination-magic .page-link {
+  background-color: transparent;
+  border: 2px solid #007bff;
+  color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  margin-right: 0.5rem;
+}
+
+.pagination-magic .page-link:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+
+.loading-container-magic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #202124;
+  color: white;
+}
+
+
+
+
 
 /**** MAGIC-DETAIL-PAGE ****/
-
 .magic-detail-container {
   padding: 3rem 1.5rem !important;
   background-image: url('/public/images/pokemon-background.png');
@@ -290,8 +414,9 @@
 }
 
 
-/****  PERSONAL PAGE ****/
 
+
+/****  PERSONAL PAGE ****/
 .user-page-container {
   background-image: url('/public/images/pokemon-background.png');
   background-size: auto;
@@ -301,8 +426,29 @@
   padding-right: 1rem;
   min-height: 100vh;
   color: white;
+  padding-top: 2rem;
+}
+.user-page-container h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra al testo */
+}
+.user-page-title {
+  color: white;
+  text-align: center;
+  border: 1px solid white;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 .user-page-card {
   background-color: transparent !important;
   color: white !important;
+}
+.preferite-game-button {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.preferite-game-button button {
+  margin-right: 1rem;
 }

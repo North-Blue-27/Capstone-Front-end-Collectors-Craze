@@ -131,8 +131,8 @@ function Header() {
             {isLoggedIn ? (
               <>
                 <Button
-                  variant="outline-light"
-                  className="mr-2"
+                  variant="outline-info"
+                  className="mr-2 user-page-button"
                   onClick={goToMyPage}
                 >
                   My Page
@@ -148,18 +148,18 @@ function Header() {
             ) : (
               <>
                 <Button
-                  variant="outline-danger"
-                  className="m-1"
-                  onClick={() => setShowModal(true)}
-                >
-                  Register
-                </Button>
-                <Button
                   variant="outline-info"
                   className="m-1"
                   onClick={handleLogin}
                 >
                   Login
+                </Button>
+                <Button
+                  variant="outline-danger"
+                  className="m-1"
+                  onClick={() => setShowModal(true)}
+                >
+                  Register
                 </Button>
               </>
             )}
