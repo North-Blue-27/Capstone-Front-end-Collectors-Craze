@@ -18,15 +18,15 @@ Tecnologie utilizzate:
 
 Collector's Craze è sviluppato con le seguenti tecnologie:
 
-    React: Per la creazione dell'interfaccia utente.
-    React Router: Per la gestione del routing nell'applicazione.
-    Bootstrap: Per lo stile e la struttura responsive.
-    Axios: Per le richieste HTTP al server API.
-    Redux Toolkit: Per la gestione dello stato dell'applicazione
-    JSON Server: Per simulare un server API locale.
-    JSON Server Auth: Per l'autenticazione degli utenti nel server JSON.
+   React: Per la creazione dell'interfaccia utente.
+   React Router: Per la gestione del routing nell'applicazione.
+   Bootstrap: Per lo stile e la struttura responsive.
+   Axios: Per le richieste HTTP al server API.
+   Redux Toolkit: Per la gestione dello stato dell'applicazione
+   JSON Server: Per simulare un server API locale.
+   JSON Server Auth: Per l'autenticazione degli utenti nel server JSON.
 
-Installazione
+- Installazione -
 
 Clona il repository:
 
@@ -34,13 +34,13 @@ Clona il repository:
 
 Naviga nella directory del progetto:
 
-    bash
+bash
 
     cd collectors-craze
 
 Installa le dipendenze:
 
-    bash
+bash
 
     npm install
 
@@ -48,7 +48,7 @@ Avvio dell'applicazione
 
 Per avviare Collector's Craze, esegui il seguente comando dalla radice del progetto:
 
-    bash
+bash
 
     npm start
 
@@ -60,7 +60,7 @@ Collector's Craze utilizza json-server come server API per gestire i dati della 
 
 Per avviare il server API, esegui il seguente comando dalla radice del progetto:
 
-    bash
+bash
 
     npx json-server --watch db.json --middlewares ./node_modules/json-server-auth --port 3001
 
