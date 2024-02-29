@@ -16,6 +16,9 @@ const Pokemon = () => {
     currentPage: 1,
   });
 
+  // Aggiungi stato per la parola chiave di ricerca
+  const [searchKeyword, setSearchKeyword] = useState("");
+
   useEffect(() => {
     const fetchLatestSet = async () => {
       try {
@@ -90,6 +93,9 @@ const Pokemon = () => {
     if (!searchTerm) {
       return;
     }
+
+    // Imposta la parola chiave di ricerca
+    setSearchKeyword(searchTerm);
 
     setPokemonData((prevState) => ({
       ...prevState,
@@ -219,10 +225,13 @@ const Pokemon = () => {
     return <div>Error: {error}</div>;
   }
 
-  const pageTitle = latestSet
+  
+  let pageTitle = latestSet
     ? `Latest Pokemon Set: ${latestSet.name}`
     : "Latest Pokemon Set: Loading...";
-  const searched = searchTerm !== "";
+  if (searchKeyword) {
+    pageTitle = `Search Results For: "${searchKeyword}"`;
+  }
 
   return (
     <div className="pokemon-page">
@@ -233,7 +242,7 @@ const Pokemon = () => {
           and create a list of your favorites
         </h2>
       </div>
-      <div className="search-pokemon"> {/* Aggiungi la classe search-pokemon */}
+      <div className="search-pokemon">
         <PokemonTools
           searchTerm={searchTerm}
           setSearchTerm={(term) =>
@@ -267,7 +276,7 @@ const Pokemon = () => {
       </div>
       <div className="pagination-container">
         <Pagination className="pagination-pokemon pagination-md">
-          {searched
+          {searchKeyword
             ? Array.from({ length: totalPages }, (_, i) => i + 1).map(
                 (page) => (
                   <Pagination.Item

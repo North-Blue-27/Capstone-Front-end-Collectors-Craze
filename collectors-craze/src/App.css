@@ -168,7 +168,7 @@
 }
 .pagination-pokemon .page-link {
   background-color: transparent;
-  border: 2px solid #007bff;
+  border: 2px solid slategray;
   color: white;
   border-radius: 50%;
   transition: all 0.3s ease;
@@ -181,12 +181,18 @@
 }
 
 .pagination-pokemon .page-link:hover {
-  background-color: #007bff;
-  color: #fff;
+  background-color: transparent;
+  color: white;
+  border: 2px solid red
 }
-.pagination-pokemon .page-item.active .page-link {
-  background-color:white;
-  color: #007bff
+ .page-item.active .page-link {
+  background-color:transparent;
+  color: white; 
+  border-color: red;
+}
+.pagination-pokemon .page-link:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .search-pokemon {
@@ -314,12 +320,12 @@
 
 .custom-dropdown-menu {
   width: 20rem;
-  max-height: 50vh; /* Imposta l'altezza massima del menu */
-  overflow-y: auto; /* Aggiungi scorrimento verticale se necessario */
-  position: relative; /* Imposta la posizione relativa */
+  max-height: 50vh;
+  overflow-y: auto;
+  position: relative;
 }
 
-.set-item:hover {
+.custom-dropdown-menu .set-item:hover {
   background-color: slategray;
   color: white;
 }
@@ -328,6 +334,9 @@
   .custom-dropdown-menu {
       width: 15rem !important;
       max-height: 50vh;
+  }
+  .select-set-toggle {
+    margin-top: 0.5rem;
   }
 }
 @media (max-width: 500px) {
@@ -352,9 +361,9 @@
   margin-bottom: 0;
   
 }
-.pagination-magic .page-link {
+.pagination-magic .page-link{
   background-color: transparent;
-  border: 2px solid #007bff;
+  border: 2px solid slategray;
   color: white;
   border-radius: 50%;
   transition: all 0.3s ease;
@@ -362,8 +371,18 @@
 }
 
 .pagination-magic .page-link:hover {
-  background-color: #007bff;
-  color: #fff;
+  background-color: transparent;
+  color: white;
+  border: 2px solid red;
+}
+.pagination-magic .page-item.active .page-link {
+  background-color: transparent;
+  color: white; 
+  border-color: red;
+}
+.pagination-magic .page-link:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 

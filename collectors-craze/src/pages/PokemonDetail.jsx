@@ -203,13 +203,9 @@ const PokemonDetail = () => {
                       {pokemon.tcgplayer && (
                         <>
                           <li>
-                            <a
-                              href={pokemon.tcgplayer.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              {pokemon.tcgplayer.url}
-                            </a>
+                          <Button variant="outline-primary" href={pokemon.tcgplayer.url} target="_blank" rel="noopener noreferrer">
+                              View on TCGPlayer
+                            </Button>
                           </li>
                           <li>Last Updated: {pokemon.tcgplayer.updatedAt}</li>
                           <li>
@@ -240,13 +236,9 @@ const PokemonDetail = () => {
                     <h3>Cardmarket</h3>
                     <ul>
                       <li>
-                        <a
-                          href={pokemon.cardmarket.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {pokemon.cardmarket.url}
-                        </a>
+                      <Button variant="outline-primary" href={pokemon.cardmarket.url} target="_blank" rel="noopener noreferrer">
+                              View on Cardmarket
+                            </Button>
                       </li>
                       <li>Last Updated: {pokemon.cardmarket.updatedAt}</li>
                       <li>

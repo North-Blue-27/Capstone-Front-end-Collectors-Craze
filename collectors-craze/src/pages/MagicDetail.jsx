@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col,Button } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { RingLoader } from "react-spinners";
@@ -287,7 +287,9 @@ const MagicDetail = () => {
               <div>
                 <h4 className="magic-detail-section-title">External Links</h4>
                 <p>
-                  <a href={card.related_uris.edhrec}>EDHREC</a>
+                <Button variant="outline-primary" href={card.related_uris.edhrec} target="_blank" rel="noopener noreferrer">
+          View on EDHREC
+        </Button>
                 </p>
               </div>
             )}

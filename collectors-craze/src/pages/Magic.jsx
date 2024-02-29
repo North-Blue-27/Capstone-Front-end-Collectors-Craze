@@ -62,6 +62,7 @@ const Magic = () => {
       setFoundCardIds((prevIds) => [...prevIds, ...newCardIds]);
       setSearchTerm("");
       setLoading(false);
+      setCurrentPage(1);
     } catch (error) {
       console.error("Error fetching search results:", error);
       setLoading(false);
@@ -88,6 +89,7 @@ const Magic = () => {
       const newCardIds = uniqueResults.map((card) => card.id);
       setFoundCardIds((prevIds) => [...prevIds, ...newCardIds]);
       setLoading(false);
+      setCurrentPage(1);
     } catch (error) {
       console.error("Error fetching cards for set:", error);
       setLoading(false);
@@ -139,7 +141,7 @@ const Magic = () => {
               onChange={handleInputChange}
             />
           </Col>
-          <Col md={2}>
+          <Col md={1}>
             <Button
               variant="outline-light"
               onClick={handleSearch}
@@ -205,12 +207,17 @@ const Magic = () => {
       </Row>
       <div className="pagination-container">
       <Pagination className="pagination-magic">
-        {Array.from({ length: Math.ceil(searchResults.length / cardsPerPage) }, (_, i) => (
-          <Pagination.Item key={i + 1} onClick={() => paginate(i + 1)}>
-            {i + 1}
-          </Pagination.Item>
-        ))}
-      </Pagination>
+  {Array.from({ length: Math.ceil(searchResults.length / cardsPerPage) }, (_, i) => (
+    <Pagination.Item
+      key={i + 1}
+      onClick={() => paginate(i + 1)}
+      active={currentPage === i + 1}
+    >
+      {i + 1}
+    </Pagination.Item>
+  ))}
+</Pagination>
+
       </div>
     </Container>
   );

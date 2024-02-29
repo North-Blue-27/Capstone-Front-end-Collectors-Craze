@@ -31,1407 +31,6 @@
       "surname": "Casalena",
       "favorites": [
         {
-          "cardId": "efdba2a9-d171-45ed-8dd4-9d0046128f68",
-          "gameName": "magic",
-          "cardData": {
-            "object": "card",
-            "id": "efdba2a9-d171-45ed-8dd4-9d0046128f68",
-            "oracle_id": "15b9b0cc-47ef-4147-aba7-a7adae41921b",
-            "multiverse_ids": [
-              967
-            ],
-            "tcgplayer_id": 3251,
-            "cardmarket_id": 6833,
-            "name": "Ydwen Efreet",
-            "lang": "en",
-            "released_at": "1993-12-17",
-            "uri": "https://api.scryfall.com/cards/efdba2a9-d171-45ed-8dd4-9d0046128f68",
-            "scryfall_uri": "https://scryfall.com/card/arn/44/ydwen-efreet?utm_source=api",
-            "layout": "normal",
-            "highres_image": true,
-            "image_status": "highres_scan",
-            "image_uris": {
-              "small": "https://cards.scryfall.io/small/front/e/f/efdba2a9-d171-45ed-8dd4-9d0046128f68.jpg?1562940066",
-              "normal": "https://cards.scryfall.io/normal/front/e/f/efdba2a9-d171-45ed-8dd4-9d0046128f68.jpg?1562940066",
-              "large": "https://cards.scryfall.io/large/front/e/f/efdba2a9-d171-45ed-8dd4-9d0046128f68.jpg?1562940066",
-              "png": "https://cards.scryfall.io/png/front/e/f/efdba2a9-d171-45ed-8dd4-9d0046128f68.png?1562940066",
-              "art_crop": "https://cards.scryfall.io/art_crop/front/e/f/efdba2a9-d171-45ed-8dd4-9d0046128f68.jpg?1562940066",
-              "border_crop": "https://cards.scryfall.io/border_crop/front/e/f/efdba2a9-d171-45ed-8dd4-9d0046128f68.jpg?1562940066"
-            },
-            "mana_cost": "{R}{R}{R}",
-            "cmc": 3,
-            "type_line": "Creature — Efreet",
-            "oracle_text": "Whenever Ydwen Efreet blocks, flip a coin. If you lose the flip, remove Ydwen Efreet from combat and it can't block this turn. Creatures it was blocking that had become blocked by only Ydwen Efreet this combat become unblocked.",
-            "power": "3",
-            "toughness": "6",
-            "colors": [
-              "R"
-            ],
-            "color_identity": [
-              "R"
-            ],
-            "keywords": [],
-            "legalities": {
-              "standard": "not_legal",
-              "future": "not_legal",
-              "historic": "not_legal",
-              "timeless": "not_legal",
-              "gladiator": "not_legal",
-              "pioneer": "not_legal",
-              "explorer": "not_legal",
-              "modern": "not_legal",
-              "legacy": "legal",
-              "pauper": "not_legal",
-              "vintage": "legal",
-              "penny": "legal",
-              "commander": "legal",
-              "oathbreaker": "legal",
-              "standardbrawl": "not_legal",
-              "brawl": "not_legal",
-              "alchemy": "not_legal",
-              "paupercommander": "not_legal",
-              "duel": "legal",
-              "oldschool": "legal",
-              "premodern": "not_legal",
-              "predh": "legal"
-            },
-            "games": [
-              "paper"
-            ],
-            "reserved": false,
-            "foil": false,
-            "nonfoil": true,
-            "finishes": [
-              "nonfoil"
-            ],
-            "oversized": false,
-            "promo": false,
-            "reprint": false,
-            "variation": false,
-            "set_id": "856f63eb-e056-43e5-8a56-7a58e1608940",
-            "set": "arn",
-            "set_name": "Arabian Nights",
-            "set_type": "expansion",
-            "set_uri": "https://api.scryfall.com/sets/856f63eb-e056-43e5-8a56-7a58e1608940",
-            "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aarn&unique=prints",
-            "scryfall_set_uri": "https://scryfall.com/sets/arn?utm_source=api",
-            "rulings_uri": "https://api.scryfall.com/cards/efdba2a9-d171-45ed-8dd4-9d0046128f68/rulings",
-            "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A15b9b0cc-47ef-4147-aba7-a7adae41921b&unique=prints",
-            "collector_number": "44",
-            "digital": false,
-            "rarity": "rare",
-            "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-            "artist": "Drew Tucker",
-            "artist_ids": [
-              "22eef389-7b21-4dda-95dc-4c9a0f1bf4dd"
-            ],
-            "illustration_id": "f2b84c83-a488-4a51-be59-87635b902cf9",
-            "border_color": "black",
-            "frame": "1993",
-            "full_art": false,
-            "textless": false,
-            "booster": true,
-            "story_spotlight": false,
-            "edhrec_rank": 23808,
-            "penny_rank": 8059,
-            "prices": {
-              "usd": "98.90",
-              "usd_foil": null,
-              "usd_etched": null,
-              "eur": "59.14",
-              "eur_foil": null,
-              "tix": null
-            },
-            "related_uris": {
-              "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=967&printed=false",
-              "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DYdwen%2BEfreet",
-              "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DYdwen%2BEfreet",
-              "edhrec": "https://edhrec.com/route/?cc=Ydwen+Efreet"
-            },
-            "purchase_uris": {
-              "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F3251%3Fpage%3D1",
-              "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Ydwen+Efreet&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-              "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Ydwen+Efreet&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
-            }
-          }
-        },
-        {
-          "cardId": "04bbd231-0d5f-4cbf-92a7-10d2c5c4b82c",
-          "gameName": "magic",
-          "cardData": {
-            "object": "card",
-            "id": "04bbd231-0d5f-4cbf-92a7-10d2c5c4b82c",
-            "oracle_id": "6c54fc14-2af8-46e8-a4dc-b2a0a88ef2e1",
-            "multiverse_ids": [
-              1049
-            ],
-            "tcgplayer_id": 3350,
-            "cardmarket_id": 6922,
-            "name": "Yawgmoth Demon",
-            "lang": "en",
-            "released_at": "1994-03-04",
-            "uri": "https://api.scryfall.com/cards/04bbd231-0d5f-4cbf-92a7-10d2c5c4b82c",
-            "scryfall_uri": "https://scryfall.com/card/atq/21/yawgmoth-demon?utm_source=api",
-            "layout": "normal",
-            "highres_image": true,
-            "image_status": "highres_scan",
-            "image_uris": {
-              "small": "https://cards.scryfall.io/small/front/0/4/04bbd231-0d5f-4cbf-92a7-10d2c5c4b82c.jpg?1562895987",
-              "normal": "https://cards.scryfall.io/normal/front/0/4/04bbd231-0d5f-4cbf-92a7-10d2c5c4b82c.jpg?1562895987",
-              "large": "https://cards.scryfall.io/large/front/0/4/04bbd231-0d5f-4cbf-92a7-10d2c5c4b82c.jpg?1562895987",
-              "png": "https://cards.scryfall.io/png/front/0/4/04bbd231-0d5f-4cbf-92a7-10d2c5c4b82c.png?1562895987",
-              "art_crop": "https://cards.scryfall.io/art_crop/front/0/4/04bbd231-0d5f-4cbf-92a7-10d2c5c4b82c.jpg?1562895987",
-              "border_crop": "https://cards.scryfall.io/border_crop/front/0/4/04bbd231-0d5f-4cbf-92a7-10d2c5c4b82c.jpg?1562895987"
-            },
-            "mana_cost": "{4}{B}{B}",
-            "cmc": 6,
-            "type_line": "Creature — Phyrexian Demon",
-            "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nFirst strike (This creature deals combat damage before creatures without first strike.)\nAt the beginning of your upkeep, you may sacrifice an artifact. If you don't, tap Yawgmoth Demon and it deals 2 damage to you.",
-            "power": "6",
-            "toughness": "6",
-            "colors": [
-              "B"
-            ],
-            "color_identity": [
-              "B"
-            ],
-            "keywords": [
-              "Flying",
-              "First strike"
-            ],
-            "legalities": {
-              "standard": "not_legal",
-              "future": "not_legal",
-              "historic": "not_legal",
-              "timeless": "not_legal",
-              "gladiator": "not_legal",
-              "pioneer": "not_legal",
-              "explorer": "not_legal",
-              "modern": "legal",
-              "legacy": "legal",
-              "pauper": "not_legal",
-              "vintage": "legal",
-              "penny": "legal",
-              "commander": "legal",
-              "oathbreaker": "legal",
-              "standardbrawl": "not_legal",
-              "brawl": "not_legal",
-              "alchemy": "not_legal",
-              "paupercommander": "restricted",
-              "duel": "legal",
-              "oldschool": "legal",
-              "premodern": "legal",
-              "predh": "legal"
-            },
-            "games": [
-              "paper"
-            ],
-            "reserved": false,
-            "foil": false,
-            "nonfoil": true,
-            "finishes": [
-              "nonfoil"
-            ],
-            "oversized": false,
-            "promo": false,
-            "reprint": false,
-            "variation": false,
-            "set_id": "819f9678-87dd-4aba-a47b-2d553bfea21f",
-            "set": "atq",
-            "set_name": "Antiquities",
-            "set_type": "expansion",
-            "set_uri": "https://api.scryfall.com/sets/819f9678-87dd-4aba-a47b-2d553bfea21f",
-            "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aatq&unique=prints",
-            "scryfall_set_uri": "https://scryfall.com/sets/atq?utm_source=api",
-            "rulings_uri": "https://api.scryfall.com/cards/04bbd231-0d5f-4cbf-92a7-10d2c5c4b82c/rulings",
-            "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A6c54fc14-2af8-46e8-a4dc-b2a0a88ef2e1&unique=prints",
-            "collector_number": "21",
-            "digital": false,
-            "rarity": "rare",
-            "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-            "artist": "Sandra Everingham",
-            "artist_ids": [
-              "8a8ac2c8-84c9-4274-9960-a19a97f0bde5"
-            ],
-            "illustration_id": "dea503c9-d482-45da-b605-a2655b5b5c8f",
-            "border_color": "black",
-            "frame": "1993",
-            "full_art": false,
-            "textless": false,
-            "booster": true,
-            "story_spotlight": false,
-            "edhrec_rank": 22527,
-            "prices": {
-              "usd": "26.70",
-              "usd_foil": null,
-              "usd_etched": null,
-              "eur": "12.84",
-              "eur_foil": null,
-              "tix": null
-            },
-            "related_uris": {
-              "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=1049&printed=false",
-              "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DYawgmoth%2BDemon",
-              "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DYawgmoth%2BDemon",
-              "edhrec": "https://edhrec.com/route/?cc=Yawgmoth+Demon"
-            },
-            "purchase_uris": {
-              "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F3350%3Fpage%3D1",
-              "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Yawgmoth+Demon&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-              "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Yawgmoth+Demon&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
-            }
-          }
-        },
-        {
-          "cardId": "sv4pt5-8",
-          "gameName": "pokemon",
-          "cardData": {
-            "id": "sv4pt5-8",
-            "name": "Charmeleon",
-            "supertype": "Pokémon",
-            "subtypes": [
-              "Stage 1"
-            ],
-            "hp": "90",
-            "types": [
-              "Fire"
-            ],
-            "evolvesFrom": "Charmander",
-            "evolvesTo": [
-              "Charizard"
-            ],
-            "abilities": [
-              {
-                "name": "Flare Veil",
-                "text": "Prevent all effects of attacks used by your opponent's Pokémon done to this Pokémon. (Damage is not an effect.)",
-                "type": "Ability"
-              }
-            ],
-            "attacks": [
-              {
-                "name": "Combustion",
-                "cost": [
-                  "Fire",
-                  "Fire"
-                ],
-                "convertedEnergyCost": 2,
-                "damage": "50",
-                "text": ""
-              }
-            ],
-            "weaknesses": [
-              {
-                "type": "Water",
-                "value": "×2"
-              }
-            ],
-            "retreatCost": [
-              "Colorless",
-              "Colorless"
-            ],
-            "convertedRetreatCost": 2,
-            "set": {
-              "id": "sv4pt5",
-              "name": "Paldean Fates",
-              "series": "Scarlet & Violet",
-              "printedTotal": 91,
-              "total": 245,
-              "legalities": {
-                "unlimited": "Legal",
-                "standard": "Legal",
-                "expanded": "Legal"
-              },
-              "releaseDate": "2024/01/26",
-              "updatedAt": "2024/01/25 15:00:00",
-              "images": {
-                "symbol": "https://images.pokemontcg.io/sv4pt5/symbol.png",
-                "logo": "https://images.pokemontcg.io/sv4pt5/logo.png"
-              }
-            },
-            "number": "8",
-            "artist": "Tonji Matsuno",
-            "rarity": "Uncommon",
-            "flavorText": "If it becomes agitated during battle, it spouts intense flames, incinerating its surroundings.",
-            "nationalPokedexNumbers": [
-              5
-            ],
-            "legalities": {
-              "unlimited": "Legal",
-              "standard": "Legal",
-              "expanded": "Legal"
-            },
-            "regulationMark": "G",
-            "images": {
-              "small": "https://images.pokemontcg.io/sv4pt5/8.png",
-              "large": "https://images.pokemontcg.io/sv4pt5/8_hires.png"
-            },
-            "tcgplayer": {
-              "url": "https://prices.pokemontcg.io/tcgplayer/sv4pt5-8",
-              "updatedAt": "2024/02/26",
-              "prices": {
-                "reverseHolofoil": {
-                  "low": 0.1,
-                  "mid": 0.33,
-                  "high": 4.98,
-                  "market": 0.34,
-                  "directLow": null
-                },
-                "normal": {
-                  "low": 0.02,
-                  "mid": 0.14,
-                  "high": 4.98,
-                  "market": 0.12,
-                  "directLow": null
-                }
-              }
-            },
-            "cardmarket": {
-              "url": "https://prices.pokemontcg.io/cardmarket/sv4pt5-8",
-              "updatedAt": "2024/02/26",
-              "prices": {
-                "averageSellPrice": 0.06,
-                "lowPrice": 0.02,
-                "trendPrice": 0.04,
-                "germanProLow": 0,
-                "suggestedPrice": 0,
-                "reverseHoloSell": 0.2,
-                "reverseHoloLow": 0.04,
-                "reverseHoloTrend": 0.14,
-                "lowPriceExPlus": 0.02,
-                "avg1": 0.03,
-                "avg7": 0.05,
-                "avg30": 0.06,
-                "reverseHoloAvg1": 0.14,
-                "reverseHoloAvg7": 0.15,
-                "reverseHoloAvg30": 0.2
-              }
-            }
-          }
-        },
-        {
-          "cardId": "sv4pt5-29",
-          "gameName": "pokemon",
-          "cardData": {
-            "id": "sv4pt5-29",
-            "name": "Gardevoir ex",
-            "supertype": "Pokémon",
-            "subtypes": [
-              "Stage 2",
-              "ex"
-            ],
-            "hp": "310",
-            "types": [
-              "Psychic"
-            ],
-            "evolvesFrom": "Kirlia",
-            "rules": [
-              "Pokémon ex rule: When your Pokémon ex is Knocked Out, your opponent takes 2 Prize cards."
-            ],
-            "abilities": [
-              {
-                "name": "Psychic Embrace",
-                "text": "As often as you like during your turn, you may attach a Basic Psychic Energy card from your discard pile to 1 of your Psychic Pokémon. If you attached Energy to a Pokémon in this way, put 2 damage counters on that Pokémon. You can't use this Ability on a Pokémon that would be Knocked Out.",
-                "type": "Ability"
-              }
-            ],
-            "attacks": [
-              {
-                "name": "Miracle Force",
-                "cost": [
-                  "Psychic",
-                  "Psychic",
-                  "Colorless"
-                ],
-                "convertedEnergyCost": 3,
-                "damage": "190",
-                "text": "This Pokémon recovers from all Special Conditions."
-              }
-            ],
-            "weaknesses": [
-              {
-                "type": "Darkness",
-                "value": "×2"
-              }
-            ],
-            "resistances": [
-              {
-                "type": "Fighting",
-                "value": "-30"
-              }
-            ],
-            "retreatCost": [
-              "Colorless",
-              "Colorless"
-            ],
-            "convertedRetreatCost": 2,
-            "set": {
-              "id": "sv4pt5",
-              "name": "Paldean Fates",
-              "series": "Scarlet & Violet",
-              "printedTotal": 91,
-              "total": 245,
-              "legalities": {
-                "unlimited": "Legal",
-                "standard": "Legal",
-                "expanded": "Legal"
-              },
-              "releaseDate": "2024/01/26",
-              "updatedAt": "2024/01/25 15:00:00",
-              "images": {
-                "symbol": "https://images.pokemontcg.io/sv4pt5/symbol.png",
-                "logo": "https://images.pokemontcg.io/sv4pt5/logo.png"
-              }
-            },
-            "number": "29",
-            "artist": "N-DESIGN Inc.",
-            "rarity": "Double Rare",
-            "nationalPokedexNumbers": [
-              282
-            ],
-            "legalities": {
-              "unlimited": "Legal",
-              "standard": "Legal",
-              "expanded": "Legal"
-            },
-            "regulationMark": "G",
-            "images": {
-              "small": "https://images.pokemontcg.io/sv4pt5/29.png",
-              "large": "https://images.pokemontcg.io/sv4pt5/29_hires.png"
-            },
-            "tcgplayer": {
-              "url": "https://prices.pokemontcg.io/tcgplayer/sv4pt5-29",
-              "updatedAt": "2024/02/26",
-              "prices": {
-                "holofoil": {
-                  "low": 0.2,
-                  "mid": 0.56,
-                  "high": 7.48,
-                  "market": 0.46,
-                  "directLow": null
-                }
-              }
-            },
-            "cardmarket": {
-              "url": "https://prices.pokemontcg.io/cardmarket/sv4pt5-29",
-              "updatedAt": "2024/02/26",
-              "prices": {
-                "averageSellPrice": 0.81,
-                "lowPrice": 0.1,
-                "trendPrice": 0.39,
-                "germanProLow": 0,
-                "suggestedPrice": 0,
-                "reverseHoloSell": 0,
-                "reverseHoloLow": 0,
-                "reverseHoloTrend": 0,
-                "lowPriceExPlus": 0.1,
-                "avg1": 0.52,
-                "avg7": 0.57,
-                "avg30": 0.82,
-                "reverseHoloAvg1": 0,
-                "reverseHoloAvg7": 0,
-                "reverseHoloAvg30": 0
-              }
-            }
-          }
-        },
-        {
-          "cardId": "684c5070-e72a-42fb-ab5c-44d7f04f9d34",
-          "gameName": "magic",
-          "cardData": {
-            "object": "card",
-            "id": "684c5070-e72a-42fb-ab5c-44d7f04f9d34",
-            "oracle_id": "9456c5b6-946d-403a-8ed0-dff9f921d98c",
-            "multiverse_ids": [],
-            "tcgplayer_id": 211782,
-            "cardmarket_id": 16799,
-            "name": "Black Knight",
-            "lang": "en",
-            "released_at": "1994-06-21",
-            "uri": "https://api.scryfall.com/cards/684c5070-e72a-42fb-ab5c-44d7f04f9d34",
-            "scryfall_uri": "https://scryfall.com/card/sum/95/black-knight?utm_source=api",
-            "layout": "normal",
-            "highres_image": true,
-            "image_status": "highres_scan",
-            "image_uris": {
-              "small": "https://cards.scryfall.io/small/front/6/8/684c5070-e72a-42fb-ab5c-44d7f04f9d34.jpg?1559592948",
-              "normal": "https://cards.scryfall.io/normal/front/6/8/684c5070-e72a-42fb-ab5c-44d7f04f9d34.jpg?1559592948",
-              "large": "https://cards.scryfall.io/large/front/6/8/684c5070-e72a-42fb-ab5c-44d7f04f9d34.jpg?1559592948",
-              "png": "https://cards.scryfall.io/png/front/6/8/684c5070-e72a-42fb-ab5c-44d7f04f9d34.png?1559592948",
-              "art_crop": "https://cards.scryfall.io/art_crop/front/6/8/684c5070-e72a-42fb-ab5c-44d7f04f9d34.jpg?1559592948",
-              "border_crop": "https://cards.scryfall.io/border_crop/front/6/8/684c5070-e72a-42fb-ab5c-44d7f04f9d34.jpg?1559592948"
-            },
-            "mana_cost": "{B}{B}",
-            "cmc": 2,
-            "type_line": "Creature — Human Knight",
-            "oracle_text": "First strike (This creature deals combat damage before creatures without first strike.)\nProtection from white (This creature can't be blocked, targeted, dealt damage, or enchanted by anything white.)",
-            "power": "2",
-            "toughness": "2",
-            "colors": [
-              "B"
-            ],
-            "color_identity": [
-              "B"
-            ],
-            "keywords": [
-              "First strike",
-              "Protection"
-            ],
-            "legalities": {
-              "standard": "not_legal",
-              "future": "not_legal",
-              "historic": "not_legal",
-              "timeless": "not_legal",
-              "gladiator": "not_legal",
-              "pioneer": "not_legal",
-              "explorer": "not_legal",
-              "modern": "legal",
-              "legacy": "legal",
-              "pauper": "not_legal",
-              "vintage": "legal",
-              "penny": "legal",
-              "commander": "legal",
-              "oathbreaker": "legal",
-              "standardbrawl": "not_legal",
-              "brawl": "not_legal",
-              "alchemy": "not_legal",
-              "paupercommander": "restricted",
-              "duel": "legal",
-              "oldschool": "legal",
-              "premodern": "legal",
-              "predh": "legal"
-            },
-            "games": [
-              "paper"
-            ],
-            "reserved": false,
-            "foil": false,
-            "nonfoil": true,
-            "finishes": [
-              "nonfoil"
-            ],
-            "oversized": false,
-            "promo": false,
-            "reprint": true,
-            "variation": false,
-            "set_id": "7993c591-1361-4dcb-b2af-ac94dd8e86e8",
-            "set": "sum",
-            "set_name": "Summer Magic / Edgar",
-            "set_type": "core",
-            "set_uri": "https://api.scryfall.com/sets/7993c591-1361-4dcb-b2af-ac94dd8e86e8",
-            "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Asum&unique=prints",
-            "scryfall_set_uri": "https://scryfall.com/sets/sum?utm_source=api",
-            "rulings_uri": "https://api.scryfall.com/cards/684c5070-e72a-42fb-ab5c-44d7f04f9d34/rulings",
-            "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A9456c5b6-946d-403a-8ed0-dff9f921d98c&unique=prints",
-            "collector_number": "95",
-            "digital": false,
-            "rarity": "uncommon",
-            "flavor_text": "Battle doesn't need a purpose; the battle is its own purpose. You don't ask why a plague spreads or a field burns. Don't ask why I fight.",
-            "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-            "artist": "Jeff A. Menges",
-            "artist_ids": [
-              "14a1de4b-1237-4e7b-8868-b71e87c9a46e"
-            ],
-            "illustration_id": "1d2452e5-ca1f-4c39-8977-b816d334dd21",
-            "border_color": "white",
-            "frame": "1993",
-            "full_art": false,
-            "textless": false,
-            "booster": true,
-            "story_spotlight": false,
-            "edhrec_rank": 13196,
-            "penny_rank": 6459,
-            "prices": {
-              "usd": null,
-              "usd_foil": null,
-              "usd_etched": null,
-              "eur": "650.00",
-              "eur_foil": null,
-              "tix": null
-            },
-            "related_uris": {
-              "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DBlack%2BKnight",
-              "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DBlack%2BKnight",
-              "edhrec": "https://edhrec.com/route/?cc=Black+Knight"
-            },
-            "purchase_uris": {
-              "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F211782%3Fpage%3D1",
-              "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Black+Knight&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-              "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Black+Knight&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
-            }
-          }
-        },
-        {
-          "cardId": "sv4pt5-26",
-          "gameName": "pokemon",
-          "cardData": {
-            "id": "sv4pt5-26",
-            "name": "Xatu",
-            "supertype": "Pokémon",
-            "subtypes": [
-              "Stage 1"
-            ],
-            "hp": "100",
-            "types": [
-              "Psychic"
-            ],
-            "evolvesFrom": "Natu",
-            "abilities": [
-              {
-                "name": "Clairvoyant Sense",
-                "text": "Once during your turn, you may attach a Basic Psychic Energy card from your hand to 1 of your Benched Pokémon. If you attached Energy to a Pokémon in this way, draw 2 cards.",
-                "type": "Ability"
-              }
-            ],
-            "attacks": [
-              {
-                "name": "Super Psy Bolt",
-                "cost": [
-                  "Psychic",
-                  "Colorless",
-                  "Colorless"
-                ],
-                "convertedEnergyCost": 3,
-                "damage": "80",
-                "text": ""
-              }
-            ],
-            "weaknesses": [
-              {
-                "type": "Darkness",
-                "value": "×2"
-              }
-            ],
-            "resistances": [
-              {
-                "type": "Fighting",
-                "value": "-30"
-              }
-            ],
-            "retreatCost": [
-              "Colorless"
-            ],
-            "convertedRetreatCost": 1,
-            "set": {
-              "id": "sv4pt5",
-              "name": "Paldean Fates",
-              "series": "Scarlet & Violet",
-              "printedTotal": 91,
-              "total": 245,
-              "legalities": {
-                "unlimited": "Legal",
-                "standard": "Legal",
-                "expanded": "Legal"
-              },
-              "releaseDate": "2024/01/26",
-              "updatedAt": "2024/01/25 15:00:00",
-              "images": {
-                "symbol": "https://images.pokemontcg.io/sv4pt5/symbol.png",
-                "logo": "https://images.pokemontcg.io/sv4pt5/logo.png"
-              }
-            },
-            "number": "26",
-            "artist": "DOM",
-            "rarity": "Rare",
-            "flavorText": "This odd Pokémon can see both the past and the future. It eyes the sun's movement all day.",
-            "nationalPokedexNumbers": [
-              178
-            ],
-            "legalities": {
-              "unlimited": "Legal",
-              "standard": "Legal",
-              "expanded": "Legal"
-            },
-            "regulationMark": "G",
-            "images": {
-              "small": "https://images.pokemontcg.io/sv4pt5/26.png",
-              "large": "https://images.pokemontcg.io/sv4pt5/26_hires.png"
-            },
-            "tcgplayer": {
-              "url": "https://prices.pokemontcg.io/tcgplayer/sv4pt5-26",
-              "updatedAt": "2024/02/27",
-              "prices": {
-                "reverseHolofoil": {
-                  "low": 0.05,
-                  "mid": 0.2,
-                  "high": 4.98,
-                  "market": 0.14,
-                  "directLow": null
-                },
-                "holofoil": {
-                  "low": 0.01,
-                  "mid": 0.15,
-                  "high": 4.98,
-                  "market": 0.1,
-                  "directLow": 0.1
-                }
-              }
-            },
-            "cardmarket": {
-              "url": "https://prices.pokemontcg.io/cardmarket/sv4pt5-26",
-              "updatedAt": "2024/02/27",
-              "prices": {
-                "averageSellPrice": 0.09,
-                "lowPrice": 0.02,
-                "trendPrice": 0.06,
-                "germanProLow": 0,
-                "suggestedPrice": 0,
-                "reverseHoloSell": 0.19,
-                "reverseHoloLow": 0.02,
-                "reverseHoloTrend": 0.16,
-                "lowPriceExPlus": 0.02,
-                "avg1": 0.09,
-                "avg7": 0.08,
-                "avg30": 0.09,
-                "reverseHoloAvg1": 0.14,
-                "reverseHoloAvg7": 0.17,
-                "reverseHoloAvg30": 0.19
-              }
-            }
-          }
-        },
-        {
-          "cardId": "b4575bbe-a767-4861-87c3-795a287ac363",
-          "gameName": "magic",
-          "cardData": {
-            "object": "card",
-            "id": "b4575bbe-a767-4861-87c3-795a287ac363",
-            "oracle_id": "be0fc708-b205-4307-85f3-f8fd1efd4cf6",
-            "multiverse_ids": [
-              97047
-            ],
-            "tcgplayer_id": 21696,
-            "cardmarket_id": 17699,
-            "name": "Lightning Dragon",
-            "lang": "en",
-            "released_at": "1998-09-26",
-            "uri": "https://api.scryfall.com/cards/b4575bbe-a767-4861-87c3-795a287ac363",
-            "scryfall_uri": "https://scryfall.com/card/pusg/202/lightning-dragon?utm_source=api",
-            "layout": "normal",
-            "highres_image": true,
-            "image_status": "highres_scan",
-            "image_uris": {
-              "small": "https://cards.scryfall.io/small/front/b/4/b4575bbe-a767-4861-87c3-795a287ac363.jpg?1606849863",
-              "normal": "https://cards.scryfall.io/normal/front/b/4/b4575bbe-a767-4861-87c3-795a287ac363.jpg?1606849863",
-              "large": "https://cards.scryfall.io/large/front/b/4/b4575bbe-a767-4861-87c3-795a287ac363.jpg?1606849863",
-              "png": "https://cards.scryfall.io/png/front/b/4/b4575bbe-a767-4861-87c3-795a287ac363.png?1606849863",
-              "art_crop": "https://cards.scryfall.io/art_crop/front/b/4/b4575bbe-a767-4861-87c3-795a287ac363.jpg?1606849863",
-              "border_crop": "https://cards.scryfall.io/border_crop/front/b/4/b4575bbe-a767-4861-87c3-795a287ac363.jpg?1606849863"
-            },
-            "mana_cost": "{2}{R}{R}",
-            "cmc": 4,
-            "type_line": "Creature — Dragon",
-            "oracle_text": "Flying\nEcho {2}{R}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\n{R}: Lightning Dragon gets +1/+0 until end of turn.",
-            "power": "4",
-            "toughness": "4",
-            "colors": [
-              "R"
-            ],
-            "color_identity": [
-              "R"
-            ],
-            "keywords": [
-              "Echo",
-              "Flying"
-            ],
-            "legalities": {
-              "standard": "not_legal",
-              "future": "not_legal",
-              "historic": "not_legal",
-              "timeless": "not_legal",
-              "gladiator": "not_legal",
-              "pioneer": "not_legal",
-              "explorer": "not_legal",
-              "modern": "not_legal",
-              "legacy": "legal",
-              "pauper": "not_legal",
-              "vintage": "legal",
-              "penny": "legal",
-              "commander": "legal",
-              "oathbreaker": "legal",
-              "standardbrawl": "not_legal",
-              "brawl": "not_legal",
-              "alchemy": "not_legal",
-              "paupercommander": "not_legal",
-              "duel": "legal",
-              "oldschool": "not_legal",
-              "premodern": "legal",
-              "predh": "legal"
-            },
-            "games": [
-              "paper"
-            ],
-            "reserved": true,
-            "foil": true,
-            "nonfoil": false,
-            "finishes": [
-              "foil"
-            ],
-            "oversized": false,
-            "promo": true,
-            "reprint": true,
-            "variation": false,
-            "set_id": "fa0c6488-475f-4e88-8149-e131619bd215",
-            "set": "pusg",
-            "set_name": "Urza's Saga Promos",
-            "set_type": "promo",
-            "set_uri": "https://api.scryfall.com/sets/fa0c6488-475f-4e88-8149-e131619bd215",
-            "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Apusg&unique=prints",
-            "scryfall_set_uri": "https://scryfall.com/sets/pusg?utm_source=api",
-            "rulings_uri": "https://api.scryfall.com/cards/b4575bbe-a767-4861-87c3-795a287ac363/rulings",
-            "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Abe0fc708-b205-4307-85f3-f8fd1efd4cf6&unique=prints",
-            "collector_number": "202",
-            "digital": false,
-            "rarity": "rare",
-            "watermark": "wotc",
-            "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-            "artist": "Ron Spencer",
-            "artist_ids": [
-              "dab52c11-0564-4207-a4a1-c1735c946a65"
-            ],
-            "illustration_id": "305f7537-b8fb-4334-817c-3a26e9c49b3f",
-            "border_color": "black",
-            "frame": "1997",
-            "full_art": false,
-            "textless": false,
-            "booster": false,
-            "story_spotlight": false,
-            "promo_types": [
-              "datestamped",
-              "prerelease"
-            ],
-            "edhrec_rank": 24307,
-            "penny_rank": 14614,
-            "prices": {
-              "usd": null,
-              "usd_foil": "74.50",
-              "usd_etched": null,
-              "eur": null,
-              "eur_foil": "42.50",
-              "tix": null
-            },
-            "related_uris": {
-              "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=97047&printed=false",
-              "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DLightning%2BDragon",
-              "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DLightning%2BDragon",
-              "edhrec": "https://edhrec.com/route/?cc=Lightning+Dragon"
-            },
-            "purchase_uris": {
-              "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F21696%3Fpage%3D1",
-              "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Lightning+Dragon&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-              "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Lightning+Dragon&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
-            }
-          }
-        },
-        {
-          "cardId": "sv4pt5-28",
-          "gameName": "pokemon",
-          "cardData": {
-            "id": "sv4pt5-28",
-            "name": "Kirlia",
-            "supertype": "Pokémon",
-            "subtypes": [
-              "Stage 1"
-            ],
-            "hp": "90",
-            "types": [
-              "Psychic"
-            ],
-            "evolvesFrom": "Ralts",
-            "evolvesTo": [
-              "Gardevoir",
-              "Gallade"
-            ],
-            "attacks": [
-              {
-                "name": "Magical Shot",
-                "cost": [
-                  "Psychic",
-                  "Colorless"
-                ],
-                "convertedEnergyCost": 2,
-                "damage": "30",
-                "text": ""
-              },
-              {
-                "name": "Psychic",
-                "cost": [
-                  "Psychic",
-                  "Psychic",
-                  "Colorless"
-                ],
-                "convertedEnergyCost": 3,
-                "damage": "60+",
-                "text": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon."
-              }
-            ],
-            "weaknesses": [
-              {
-                "type": "Darkness",
-                "value": "×2"
-              }
-            ],
-            "resistances": [
-              {
-                "type": "Fighting",
-                "value": "-30"
-              }
-            ],
-            "retreatCost": [
-              "Colorless"
-            ],
-            "convertedRetreatCost": 1,
-            "set": {
-              "id": "sv4pt5",
-              "name": "Paldean Fates",
-              "series": "Scarlet & Violet",
-              "printedTotal": 91,
-              "total": 245,
-              "legalities": {
-                "unlimited": "Legal",
-                "standard": "Legal",
-                "expanded": "Legal"
-              },
-              "releaseDate": "2024/01/26",
-              "updatedAt": "2024/01/25 15:00:00",
-              "images": {
-                "symbol": "https://images.pokemontcg.io/sv4pt5/symbol.png",
-                "logo": "https://images.pokemontcg.io/sv4pt5/logo.png"
-              }
-            },
-            "number": "28",
-            "artist": "kawayoo",
-            "rarity": "Uncommon",
-            "flavorText": "It has a psychic power that enables it to distort the space around it and see into the future.",
-            "nationalPokedexNumbers": [
-              281
-            ],
-            "legalities": {
-              "unlimited": "Legal",
-              "standard": "Legal",
-              "expanded": "Legal"
-            },
-            "regulationMark": "G",
-            "images": {
-              "small": "https://images.pokemontcg.io/sv4pt5/28.png",
-              "large": "https://images.pokemontcg.io/sv4pt5/28_hires.png"
-            },
-            "tcgplayer": {
-              "url": "https://prices.pokemontcg.io/tcgplayer/sv4pt5-28",
-              "updatedAt": "2024/02/27",
-              "prices": {
-                "reverseHolofoil": {
-                  "low": 0.03,
-                  "mid": 0.2,
-                  "high": 4.98,
-                  "market": 0.17,
-                  "directLow": 0.1
-                },
-                "normal": {
-                  "low": 0.01,
-                  "mid": 0.08,
-                  "high": 4.98,
-                  "market": 0.03,
-                  "directLow": 0.03
-                }
-              }
-            },
-            "cardmarket": {
-              "url": "https://prices.pokemontcg.io/cardmarket/sv4pt5-28",
-              "updatedAt": "2024/02/27",
-              "prices": {
-                "averageSellPrice": 0.03,
-                "lowPrice": 0.01,
-                "trendPrice": 0.03,
-                "germanProLow": 0,
-                "suggestedPrice": 0,
-                "reverseHoloSell": 0.14,
-                "reverseHoloLow": 0.02,
-                "reverseHoloTrend": 0.14,
-                "lowPriceExPlus": 0.01,
-                "avg1": 0.03,
-                "avg7": 0.03,
-                "avg30": 0.03,
-                "reverseHoloAvg1": 0.13,
-                "reverseHoloAvg7": 0.17,
-                "reverseHoloAvg30": 0.14
-              }
-            }
-          }
-        },
-        {
-          "cardId": "sv4pt5-215",
-          "gameName": "pokemon",
-          "cardData": {
-            "id": "sv4pt5-215",
-            "name": "Alakazam ex",
-            "supertype": "Pokémon",
-            "subtypes": [
-              "Stage 2",
-              "ex"
-            ],
-            "hp": "310",
-            "types": [
-              "Psychic"
-            ],
-            "evolvesFrom": "Kadabra",
-            "rules": [
-              "Pokémon ex rule: When your Pokémon ex is Knocked Out, your opponent takes 2 Prize cards."
-            ],
-            "attacks": [
-              {
-                "name": "Mind Jack",
-                "cost": [
-                  "Colorless",
-                  "Colorless"
-                ],
-                "convertedEnergyCost": 2,
-                "damage": "90+",
-                "text": "This attack does 30 more damage for each of your opponent's Benched Pokémon."
-              },
-              {
-                "name": "Dimensional Hand",
-                "cost": [
-                  "Psychic",
-                  "Psychic"
-                ],
-                "convertedEnergyCost": 2,
-                "damage": "120",
-                "text": "This attack can be used even if this Pokémon is on the Bench."
-              }
-            ],
-            "weaknesses": [
-              {
-                "type": "Darkness",
-                "value": "×2"
-              }
-            ],
-            "resistances": [
-              {
-                "type": "Fighting",
-                "value": "-30"
-              }
-            ],
-            "retreatCost": [
-              "Colorless"
-            ],
-            "convertedRetreatCost": 1,
-            "set": {
-              "id": "sv4pt5",
-              "name": "Paldean Fates",
-              "series": "Scarlet & Violet",
-              "printedTotal": 91,
-              "total": 245,
-              "legalities": {
-                "unlimited": "Legal",
-                "standard": "Legal",
-                "expanded": "Legal"
-              },
-              "releaseDate": "2024/01/26",
-              "updatedAt": "2024/01/25 15:00:00",
-              "images": {
-                "symbol": "https://images.pokemontcg.io/sv4pt5/symbol.png",
-                "logo": "https://images.pokemontcg.io/sv4pt5/logo.png"
-              }
-            },
-            "number": "215",
-            "artist": "PLANETA Tsuji",
-            "rarity": "Shiny Ultra Rare",
-            "nationalPokedexNumbers": [
-              65
-            ],
-            "legalities": {
-              "unlimited": "Legal",
-              "standard": "Legal",
-              "expanded": "Legal"
-            },
-            "regulationMark": "G",
-            "images": {
-              "small": "https://images.pokemontcg.io/sv4pt5/215.png",
-              "large": "https://images.pokemontcg.io/sv4pt5/215_hires.png"
-            },
-            "tcgplayer": {
-              "url": "https://prices.pokemontcg.io/tcgplayer/sv4pt5-215",
-              "updatedAt": "2024/02/27",
-              "prices": {
-                "holofoil": {
-                  "low": 1,
-                  "mid": 3,
-                  "high": 19.98,
-                  "market": 1.97,
-                  "directLow": null
-                }
-              }
-            },
-            "cardmarket": {
-              "url": "https://prices.pokemontcg.io/cardmarket/sv4pt5-215",
-              "updatedAt": "2024/02/27",
-              "prices": {
-                "averageSellPrice": 3.6,
-                "lowPrice": 1.95,
-                "trendPrice": 2.46,
-                "germanProLow": 0,
-                "suggestedPrice": 0,
-                "reverseHoloSell": 0,
-                "reverseHoloLow": 0,
-                "reverseHoloTrend": 0,
-                "lowPriceExPlus": 1.95,
-                "avg1": 3.37,
-                "avg7": 2.92,
-                "avg30": 3.56,
-                "reverseHoloAvg1": 0,
-                "reverseHoloAvg7": 0,
-                "reverseHoloAvg30": 0
-              }
-            }
-          }
-        },
-        {
-          "cardId": "61d0f2f2-f6e2-4b8a-8418-10b17c5e0ea9",
-          "gameName": "magic",
-          "cardData": {
-            "object": "card",
-            "id": "61d0f2f2-f6e2-4b8a-8418-10b17c5e0ea9",
-            "oracle_id": "f06fca68-593b-4fbd-a5a9-618060311172",
-            "multiverse_ids": [
-              2731
-            ],
-            "tcgplayer_id": 4728,
-            "cardmarket_id": 6585,
-            "name": "Hymn of Rebirth",
-            "lang": "en",
-            "released_at": "1995-06-03",
-            "uri": "https://api.scryfall.com/cards/61d0f2f2-f6e2-4b8a-8418-10b17c5e0ea9",
-            "scryfall_uri": "https://scryfall.com/card/ice/295/hymn-of-rebirth?utm_source=api",
-            "layout": "normal",
-            "highres_image": true,
-            "image_status": "highres_scan",
-            "image_uris": {
-              "small": "https://cards.scryfall.io/small/front/6/1/61d0f2f2-f6e2-4b8a-8418-10b17c5e0ea9.jpg?1562913092",
-              "normal": "https://cards.scryfall.io/normal/front/6/1/61d0f2f2-f6e2-4b8a-8418-10b17c5e0ea9.jpg?1562913092",
-              "large": "https://cards.scryfall.io/large/front/6/1/61d0f2f2-f6e2-4b8a-8418-10b17c5e0ea9.jpg?1562913092",
-              "png": "https://cards.scryfall.io/png/front/6/1/61d0f2f2-f6e2-4b8a-8418-10b17c5e0ea9.png?1562913092",
-              "art_crop": "https://cards.scryfall.io/art_crop/front/6/1/61d0f2f2-f6e2-4b8a-8418-10b17c5e0ea9.jpg?1562913092",
-              "border_crop": "https://cards.scryfall.io/border_crop/front/6/1/61d0f2f2-f6e2-4b8a-8418-10b17c5e0ea9.jpg?1562913092"
-            },
-            "mana_cost": "{3}{G}{W}",
-            "cmc": 5,
-            "type_line": "Sorcery",
-            "oracle_text": "Put target creature card from a graveyard onto the battlefield under your control.",
-            "colors": [
-              "G",
-              "W"
-            ],
-            "color_identity": [
-              "G",
-              "W"
-            ],
-            "keywords": [],
-            "legalities": {
-              "standard": "not_legal",
-              "future": "not_legal",
-              "historic": "not_legal",
-              "timeless": "not_legal",
-              "gladiator": "not_legal",
-              "pioneer": "not_legal",
-              "explorer": "not_legal",
-              "modern": "not_legal",
-              "legacy": "legal",
-              "pauper": "not_legal",
-              "vintage": "legal",
-              "penny": "not_legal",
-              "commander": "legal",
-              "oathbreaker": "legal",
-              "standardbrawl": "not_legal",
-              "brawl": "not_legal",
-              "alchemy": "not_legal",
-              "paupercommander": "not_legal",
-              "duel": "legal",
-              "oldschool": "not_legal",
-              "premodern": "legal",
-              "predh": "legal"
-            },
-            "games": [
-              "paper"
-            ],
-            "reserved": false,
-            "foil": false,
-            "nonfoil": true,
-            "finishes": [
-              "nonfoil"
-            ],
-            "oversized": false,
-            "promo": false,
-            "reprint": false,
-            "variation": false,
-            "set_id": "b0e08eea-5c01-4406-a6e2-dcd09c5e5b67",
-            "set": "ice",
-            "set_name": "Ice Age",
-            "set_type": "expansion",
-            "set_uri": "https://api.scryfall.com/sets/b0e08eea-5c01-4406-a6e2-dcd09c5e5b67",
-            "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aice&unique=prints",
-            "scryfall_set_uri": "https://scryfall.com/sets/ice?utm_source=api",
-            "rulings_uri": "https://api.scryfall.com/cards/61d0f2f2-f6e2-4b8a-8418-10b17c5e0ea9/rulings",
-            "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Af06fca68-593b-4fbd-a5a9-618060311172&unique=prints",
-            "collector_number": "295",
-            "digital": false,
-            "rarity": "uncommon",
-            "flavor_text": "\"There will come soft rains, and spring shall be amongst us, a welcome friend.\"\n—Halvor Arenson, Kjeldoran Priest",
-            "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-            "artist": "Richard Kane Ferguson",
-            "artist_ids": [
-              "191620ed-2361-444e-96a6-1fe7ce32ef3b"
-            ],
-            "illustration_id": "c4d91f3c-61d6-4666-a31b-d9d1a26861c4",
-            "border_color": "black",
-            "frame": "1993",
-            "full_art": false,
-            "textless": false,
-            "booster": true,
-            "story_spotlight": false,
-            "edhrec_rank": 18073,
-            "prices": {
-              "usd": "0.22",
-              "usd_foil": null,
-              "usd_etched": null,
-              "eur": "0.25",
-              "eur_foil": null,
-              "tix": null
-            },
-            "related_uris": {
-              "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=2731&printed=false",
-              "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DHymn%2Bof%2BRebirth",
-              "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DHymn%2Bof%2BRebirth",
-              "edhrec": "https://edhrec.com/route/?cc=Hymn+of+Rebirth"
-            },
-            "purchase_uris": {
-              "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F4728%3Fpage%3D1",
-              "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Hymn+of+Rebirth&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-              "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Hymn+of+Rebirth&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
-            }
-          }
-        },
-        {
-          "cardId": "2dd41293-d7c8-4422-9f0c-b3e96350f5c9",
-          "gameName": "magic",
-          "cardData": {
-            "object": "card",
-            "id": "2dd41293-d7c8-4422-9f0c-b3e96350f5c9",
-            "oracle_id": "550c74d4-1fcb-406a-b02a-639a760a4380",
-            "multiverse_ids": [
-              692
-            ],
-            "tcgplayer_id": 8973,
-            "cardmarket_id": 4723,
-            "name": "Ancestral Recall",
-            "lang": "en",
-            "released_at": "1993-12-01",
-            "uri": "https://api.scryfall.com/cards/2dd41293-d7c8-4422-9f0c-b3e96350f5c9",
-            "scryfall_uri": "https://scryfall.com/card/2ed/48/ancestral-recall?utm_source=api",
-            "layout": "normal",
-            "highres_image": true,
-            "image_status": "highres_scan",
-            "image_uris": {
-              "small": "https://cards.scryfall.io/small/front/2/d/2dd41293-d7c8-4422-9f0c-b3e96350f5c9.jpg?1559592144",
-              "normal": "https://cards.scryfall.io/normal/front/2/d/2dd41293-d7c8-4422-9f0c-b3e96350f5c9.jpg?1559592144",
-              "large": "https://cards.scryfall.io/large/front/2/d/2dd41293-d7c8-4422-9f0c-b3e96350f5c9.jpg?1559592144",
-              "png": "https://cards.scryfall.io/png/front/2/d/2dd41293-d7c8-4422-9f0c-b3e96350f5c9.png?1559592144",
-              "art_crop": "https://cards.scryfall.io/art_crop/front/2/d/2dd41293-d7c8-4422-9f0c-b3e96350f5c9.jpg?1559592144",
-              "border_crop": "https://cards.scryfall.io/border_crop/front/2/d/2dd41293-d7c8-4422-9f0c-b3e96350f5c9.jpg?1559592144"
-            },
-            "mana_cost": "{U}",
-            "cmc": 1,
-            "type_line": "Instant",
-            "oracle_text": "Target player draws three cards.",
-            "colors": [
-              "U"
-            ],
-            "color_identity": [
-              "U"
-            ],
-            "keywords": [],
-            "legalities": {
-              "standard": "not_legal",
-              "future": "not_legal",
-              "historic": "not_legal",
-              "timeless": "not_legal",
-              "gladiator": "not_legal",
-              "pioneer": "not_legal",
-              "explorer": "not_legal",
-              "modern": "not_legal",
-              "legacy": "banned",
-              "pauper": "not_legal",
-              "vintage": "restricted",
-              "penny": "not_legal",
-              "commander": "banned",
-              "oathbreaker": "banned",
-              "standardbrawl": "not_legal",
-              "brawl": "not_legal",
-              "alchemy": "not_legal",
-              "paupercommander": "not_legal",
-              "duel": "banned",
-              "oldschool": "restricted",
-              "premodern": "not_legal",
-              "predh": "banned"
-            },
-            "games": [
-              "paper"
-            ],
-            "reserved": true,
-            "foil": false,
-            "nonfoil": true,
-            "finishes": [
-              "nonfoil"
-            ],
-            "oversized": false,
-            "promo": false,
-            "reprint": true,
-            "variation": false,
-            "set_id": "cd7694b9-339c-405d-a991-14413d4f6d5c",
-            "set": "2ed",
-            "set_name": "Unlimited Edition",
-            "set_type": "core",
-            "set_uri": "https://api.scryfall.com/sets/cd7694b9-339c-405d-a991-14413d4f6d5c",
-            "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3A2ed&unique=prints",
-            "scryfall_set_uri": "https://scryfall.com/sets/2ed?utm_source=api",
-            "rulings_uri": "https://api.scryfall.com/cards/2dd41293-d7c8-4422-9f0c-b3e96350f5c9/rulings",
-            "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A550c74d4-1fcb-406a-b02a-639a760a4380&unique=prints",
-            "collector_number": "48",
-            "digital": false,
-            "rarity": "rare",
-            "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-            "artist": "Mark Poole",
-            "artist_ids": [
-              "bfdeaf09-f915-4058-8e8b-bcac3bc43c33"
-            ],
-            "illustration_id": "d20eda7b-a902-4c00-bdab-601059e417b5",
-            "border_color": "white",
-            "frame": "1993",
-            "full_art": false,
-            "textless": false,
-            "booster": true,
-            "story_spotlight": false,
-            "prices": {
-              "usd": null,
-              "usd_foil": null,
-              "usd_etched": null,
-              "eur": "3018.73",
-              "eur_foil": null,
-              "tix": null
-            },
-            "related_uris": {
-              "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=692&printed=false",
-              "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DAncestral%2BRecall",
-              "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DAncestral%2BRecall",
-              "edhrec": "https://edhrec.com/route/?cc=Ancestral+Recall"
-            },
-            "purchase_uris": {
-              "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F8973%3Fpage%3D1",
-              "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Ancestral+Recall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-              "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Ancestral+Recall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
-            }
-          }
-        },
-        {
           "cardId": "30d1450f-2909-410e-9920-731278fa74de",
           "gameName": "magic",
           "cardData": {
@@ -1680,159 +279,44 @@
           }
         },
         {
-          "cardId": "xy4-121",
-          "gameName": "pokemon",
-          "cardData": {
-            "id": "xy4-121",
-            "name": "M Gengar-EX",
-            "supertype": "Pokémon",
-            "subtypes": [
-              "MEGA",
-              "EX"
-            ],
-            "hp": "220",
-            "types": [
-              "Psychic"
-            ],
-            "evolvesFrom": "Gengar-EX",
-            "rules": [
-              "Mega Evolution rule: When 1 of your Pokémon becomes a Mega Evolution Pokémon, your turn ends.",
-              "Pokémon-EX rule: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards."
-            ],
-            "attacks": [
-              {
-                "name": "Phantom Gate",
-                "cost": [
-                  "Psychic",
-                  "Colorless",
-                  "Colorless"
-                ],
-                "convertedEnergyCost": 3,
-                "damage": "",
-                "text": "Choose 1 of your opponent's Pokémon's attacks and use it as this attack."
-              }
-            ],
-            "weaknesses": [
-              {
-                "type": "Darkness",
-                "value": "×2"
-              }
-            ],
-            "resistances": [
-              {
-                "type": "Fighting",
-                "value": "-20"
-              }
-            ],
-            "retreatCost": [
-              "Colorless"
-            ],
-            "convertedRetreatCost": 1,
-            "set": {
-              "id": "xy4",
-              "name": "Phantom Forces",
-              "series": "XY",
-              "printedTotal": 119,
-              "total": 124,
-              "legalities": {
-                "unlimited": "Legal",
-                "expanded": "Legal"
-              },
-              "ptcgoCode": "PHF",
-              "releaseDate": "2014/11/05",
-              "updatedAt": "2020/08/14 09:35:00",
-              "images": {
-                "symbol": "https://images.pokemontcg.io/xy4/symbol.png",
-                "logo": "https://images.pokemontcg.io/xy4/logo.png"
-              }
-            },
-            "number": "121",
-            "artist": "5ban Graphics",
-            "rarity": "Rare Secret",
-            "nationalPokedexNumbers": [
-              94
-            ],
-            "legalities": {
-              "unlimited": "Legal",
-              "expanded": "Legal"
-            },
-            "images": {
-              "small": "https://images.pokemontcg.io/xy4/121.png",
-              "large": "https://images.pokemontcg.io/xy4/121_hires.png"
-            },
-            "tcgplayer": {
-              "url": "https://prices.pokemontcg.io/tcgplayer/xy4-121",
-              "updatedAt": "2024/02/28",
-              "prices": {
-                "holofoil": {
-                  "low": 36.93,
-                  "mid": 39,
-                  "high": 65,
-                  "market": 50.73,
-                  "directLow": null
-                }
-              }
-            },
-            "cardmarket": {
-              "url": "https://prices.pokemontcg.io/cardmarket/xy4-121",
-              "updatedAt": "2024/02/28",
-              "prices": {
-                "averageSellPrice": 40,
-                "lowPrice": 10,
-                "trendPrice": 51.4,
-                "germanProLow": 0,
-                "suggestedPrice": 0,
-                "reverseHoloSell": 0,
-                "reverseHoloLow": 0,
-                "reverseHoloTrend": 26.32,
-                "lowPriceExPlus": 45,
-                "avg1": 47,
-                "avg7": 46.43,
-                "avg30": 54.71,
-                "reverseHoloAvg1": 47,
-                "reverseHoloAvg7": 28.6,
-                "reverseHoloAvg30": 20.78
-              }
-            }
-          }
-        },
-        {
-          "cardId": "a21b08d4-b43d-4c93-99e7-39dfe83ced91",
+          "cardId": "6c9bb8b1-fb79-4b99-ba09-c6e6c860de50",
           "gameName": "magic",
           "cardData": {
             "object": "card",
-            "id": "a21b08d4-b43d-4c93-99e7-39dfe83ced91",
-            "oracle_id": "17fa98cd-ed8f-483f-9525-7e989a82ebb2",
+            "id": "6c9bb8b1-fb79-4b99-ba09-c6e6c860de50",
+            "oracle_id": "2847c8a0-f6aa-4e4a-a7b8-fc116436a264",
             "multiverse_ids": [
-              1329
+              59
             ],
-            "tcgplayer_id": 1340,
-            "cardmarket_id": 5715,
-            "name": "Balance",
+            "tcgplayer_id": 1086,
+            "cardmarket_id": 5245,
+            "name": "Demonic Hordes",
             "lang": "en",
-            "released_at": "1994-04-01",
-            "uri": "https://api.scryfall.com/cards/a21b08d4-b43d-4c93-99e7-39dfe83ced91",
-            "scryfall_uri": "https://scryfall.com/card/3ed/3/balance?utm_source=api",
+            "released_at": "1993-08-05",
+            "uri": "https://api.scryfall.com/cards/6c9bb8b1-fb79-4b99-ba09-c6e6c860de50",
+            "scryfall_uri": "https://scryfall.com/card/lea/103/demonic-hordes?utm_source=api",
             "layout": "normal",
             "highres_image": true,
             "image_status": "highres_scan",
             "image_uris": {
-              "small": "https://cards.scryfall.io/small/front/a/2/a21b08d4-b43d-4c93-99e7-39dfe83ced91.jpg?1559596704",
-              "normal": "https://cards.scryfall.io/normal/front/a/2/a21b08d4-b43d-4c93-99e7-39dfe83ced91.jpg?1559596704",
-              "large": "https://cards.scryfall.io/large/front/a/2/a21b08d4-b43d-4c93-99e7-39dfe83ced91.jpg?1559596704",
-              "png": "https://cards.scryfall.io/png/front/a/2/a21b08d4-b43d-4c93-99e7-39dfe83ced91.png?1559596704",
-              "art_crop": "https://cards.scryfall.io/art_crop/front/a/2/a21b08d4-b43d-4c93-99e7-39dfe83ced91.jpg?1559596704",
-              "border_crop": "https://cards.scryfall.io/border_crop/front/a/2/a21b08d4-b43d-4c93-99e7-39dfe83ced91.jpg?1559596704"
+              "small": "https://cards.scryfall.io/small/front/6/c/6c9bb8b1-fb79-4b99-ba09-c6e6c860de50.jpg?1564297005",
+              "normal": "https://cards.scryfall.io/normal/front/6/c/6c9bb8b1-fb79-4b99-ba09-c6e6c860de50.jpg?1564297005",
+              "large": "https://cards.scryfall.io/large/front/6/c/6c9bb8b1-fb79-4b99-ba09-c6e6c860de50.jpg?1564297005",
+              "png": "https://cards.scryfall.io/png/front/6/c/6c9bb8b1-fb79-4b99-ba09-c6e6c860de50.png?1564297005",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/6/c/6c9bb8b1-fb79-4b99-ba09-c6e6c860de50.jpg?1564297005",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/6/c/6c9bb8b1-fb79-4b99-ba09-c6e6c860de50.jpg?1564297005"
             },
-            "mana_cost": "{1}{W}",
-            "cmc": 2,
-            "type_line": "Sorcery",
-            "oracle_text": "Each player chooses a number of lands they control equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players discard cards and sacrifice creatures the same way.",
+            "mana_cost": "{3}{B}{B}{B}",
+            "cmc": 6,
+            "type_line": "Creature — Demon",
+            "oracle_text": "{T}: Destroy target land.\nAt the beginning of your upkeep, unless you pay {B}{B}{B}, tap Demonic Hordes and sacrifice a land of an opponent's choice.",
+            "power": "5",
+            "toughness": "5",
             "colors": [
-              "W"
+              "B"
             ],
             "color_identity": [
-              "W"
+              "B"
             ],
             "keywords": [],
             "legalities": {
@@ -1844,25 +328,25 @@
               "pioneer": "not_legal",
               "explorer": "not_legal",
               "modern": "not_legal",
-              "legacy": "banned",
+              "legacy": "legal",
               "pauper": "not_legal",
-              "vintage": "restricted",
+              "vintage": "legal",
               "penny": "not_legal",
-              "commander": "banned",
-              "oathbreaker": "banned",
+              "commander": "legal",
+              "oathbreaker": "legal",
               "standardbrawl": "not_legal",
               "brawl": "not_legal",
               "alchemy": "not_legal",
               "paupercommander": "not_legal",
               "duel": "legal",
-              "oldschool": "restricted",
-              "premodern": "banned",
-              "predh": "banned"
+              "oldschool": "legal",
+              "premodern": "not_legal",
+              "predh": "legal"
             },
             "games": [
               "paper"
             ],
-            "reserved": false,
+            "reserved": true,
             "foil": false,
             "nonfoil": true,
             "finishes": [
@@ -1870,50 +354,676 @@
             ],
             "oversized": false,
             "promo": false,
-            "reprint": true,
+            "reprint": false,
             "variation": false,
-            "set_id": "45a69797-8adf-468e-a4e1-ba81fd9d66ac",
-            "set": "3ed",
-            "set_name": "Revised Edition",
+            "set_id": "288bd996-960e-448b-a187-9504c1930c2c",
+            "set": "lea",
+            "set_name": "Limited Edition Alpha",
             "set_type": "core",
-            "set_uri": "https://api.scryfall.com/sets/45a69797-8adf-468e-a4e1-ba81fd9d66ac",
-            "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3A3ed&unique=prints",
-            "scryfall_set_uri": "https://scryfall.com/sets/3ed?utm_source=api",
-            "rulings_uri": "https://api.scryfall.com/cards/a21b08d4-b43d-4c93-99e7-39dfe83ced91/rulings",
-            "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A17fa98cd-ed8f-483f-9525-7e989a82ebb2&unique=prints",
-            "collector_number": "3",
+            "set_uri": "https://api.scryfall.com/sets/288bd996-960e-448b-a187-9504c1930c2c",
+            "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Alea&unique=prints",
+            "scryfall_set_uri": "https://scryfall.com/sets/lea?utm_source=api",
+            "rulings_uri": "https://api.scryfall.com/cards/6c9bb8b1-fb79-4b99-ba09-c6e6c860de50/rulings",
+            "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A2847c8a0-f6aa-4e4a-a7b8-fc116436a264&unique=prints",
+            "collector_number": "103",
             "digital": false,
             "rarity": "rare",
+            "flavor_text": "Created to destroy Dominia, Demons can sometimes be bent to a more focused purpose.",
             "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-            "artist": "Mark Poole",
+            "artist": "Jesper Myrfors",
             "artist_ids": [
-              "bfdeaf09-f915-4058-8e8b-bcac3bc43c33"
+              "c011318e-8503-48c1-a990-46e50aff48a0"
             ],
-            "illustration_id": "e47fbe71-fcea-4aba-9d74-fc6fec8407f7",
-            "border_color": "white",
+            "illustration_id": "7e61c768-a46b-4237-b3df-f57e8c3035e9",
+            "border_color": "black",
             "frame": "1993",
             "full_art": false,
             "textless": false,
             "booster": true,
             "story_spotlight": false,
+            "edhrec_rank": 19903,
             "prices": {
-              "usd": "4.08",
+              "usd": null,
               "usd_foil": null,
               "usd_etched": null,
-              "eur": "4.15",
+              "eur": "1080.39",
               "eur_foil": null,
               "tix": null
             },
             "related_uris": {
-              "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=1329&printed=false",
-              "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DBalance",
-              "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DBalance",
-              "edhrec": "https://edhrec.com/route/?cc=Balance"
+              "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=59&printed=false",
+              "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DDemonic%2BHordes",
+              "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DDemonic%2BHordes",
+              "edhrec": "https://edhrec.com/route/?cc=Demonic+Hordes"
             },
             "purchase_uris": {
-              "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F1340%3Fpage%3D1",
-              "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Balance&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-              "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Balance&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+              "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F1086%3Fpage%3D1",
+              "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Demonic+Hordes&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+              "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Demonic+Hordes&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+            }
+          }
+        },
+        {
+          "cardId": "a2f6ef2f-a3a2-4e1f-b7eb-59abc8414114",
+          "gameName": "magic",
+          "cardData": {
+            "object": "card",
+            "id": "a2f6ef2f-a3a2-4e1f-b7eb-59abc8414114",
+            "oracle_id": "cbd2d38b-6402-44b7-ba27-d854268e31d0",
+            "multiverse_ids": [
+              1040
+            ],
+            "tcgplayer_id": 3288,
+            "cardmarket_id": 6918,
+            "name": "Haunting Wind",
+            "lang": "en",
+            "released_at": "1994-03-04",
+            "uri": "https://api.scryfall.com/cards/a2f6ef2f-a3a2-4e1f-b7eb-59abc8414114",
+            "scryfall_uri": "https://scryfall.com/card/atq/17/haunting-wind?utm_source=api",
+            "layout": "normal",
+            "highres_image": true,
+            "image_status": "highres_scan",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/a/2/a2f6ef2f-a3a2-4e1f-b7eb-59abc8414114.jpg?1562929345",
+              "normal": "https://cards.scryfall.io/normal/front/a/2/a2f6ef2f-a3a2-4e1f-b7eb-59abc8414114.jpg?1562929345",
+              "large": "https://cards.scryfall.io/large/front/a/2/a2f6ef2f-a3a2-4e1f-b7eb-59abc8414114.jpg?1562929345",
+              "png": "https://cards.scryfall.io/png/front/a/2/a2f6ef2f-a3a2-4e1f-b7eb-59abc8414114.png?1562929345",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/a/2/a2f6ef2f-a3a2-4e1f-b7eb-59abc8414114.jpg?1562929345",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/a/2/a2f6ef2f-a3a2-4e1f-b7eb-59abc8414114.jpg?1562929345"
+            },
+            "mana_cost": "{3}{B}",
+            "cmc": 4,
+            "type_line": "Enchantment",
+            "oracle_text": "Whenever an artifact becomes tapped or a player activates an artifact's ability without {T} in its activation cost, Haunting Wind deals 1 damage to that artifact's controller.",
+            "colors": [
+              "B"
+            ],
+            "color_identity": [
+              "B"
+            ],
+            "keywords": [],
+            "legalities": {
+              "standard": "not_legal",
+              "future": "not_legal",
+              "historic": "not_legal",
+              "timeless": "not_legal",
+              "gladiator": "not_legal",
+              "pioneer": "not_legal",
+              "explorer": "not_legal",
+              "modern": "not_legal",
+              "legacy": "legal",
+              "pauper": "not_legal",
+              "vintage": "legal",
+              "penny": "not_legal",
+              "commander": "legal",
+              "oathbreaker": "legal",
+              "standardbrawl": "not_legal",
+              "brawl": "not_legal",
+              "alchemy": "not_legal",
+              "paupercommander": "not_legal",
+              "duel": "legal",
+              "oldschool": "legal",
+              "premodern": "not_legal",
+              "predh": "legal"
+            },
+            "games": [
+              "paper"
+            ],
+            "reserved": true,
+            "foil": false,
+            "nonfoil": true,
+            "finishes": [
+              "nonfoil"
+            ],
+            "oversized": false,
+            "promo": false,
+            "reprint": false,
+            "variation": false,
+            "set_id": "819f9678-87dd-4aba-a47b-2d553bfea21f",
+            "set": "atq",
+            "set_name": "Antiquities",
+            "set_type": "expansion",
+            "set_uri": "https://api.scryfall.com/sets/819f9678-87dd-4aba-a47b-2d553bfea21f",
+            "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aatq&unique=prints",
+            "scryfall_set_uri": "https://scryfall.com/sets/atq?utm_source=api",
+            "rulings_uri": "https://api.scryfall.com/cards/a2f6ef2f-a3a2-4e1f-b7eb-59abc8414114/rulings",
+            "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Acbd2d38b-6402-44b7-ba27-d854268e31d0&unique=prints",
+            "collector_number": "17",
+            "digital": false,
+            "rarity": "uncommon",
+            "flavor_text": "These devices lured so many spirits that sometimes entire battlefields would become haunted at once.",
+            "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+            "artist": "Jeff A. Menges",
+            "artist_ids": [
+              "14a1de4b-1237-4e7b-8868-b71e87c9a46e"
+            ],
+            "illustration_id": "8177d894-795b-4ee6-9556-001b7b466df5",
+            "border_color": "black",
+            "frame": "1993",
+            "full_art": false,
+            "textless": false,
+            "booster": true,
+            "story_spotlight": false,
+            "edhrec_rank": 18997,
+            "prices": {
+              "usd": "21.45",
+              "usd_foil": null,
+              "usd_etched": null,
+              "eur": "17.22",
+              "eur_foil": null,
+              "tix": null
+            },
+            "related_uris": {
+              "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=1040&printed=false",
+              "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DHaunting%2BWind",
+              "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DHaunting%2BWind",
+              "edhrec": "https://edhrec.com/route/?cc=Haunting+Wind"
+            },
+            "purchase_uris": {
+              "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F3288%3Fpage%3D1",
+              "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Haunting+Wind&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+              "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Haunting+Wind&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+            }
+          }
+        },
+        {
+          "cardId": "base6-3",
+          "gameName": "pokemon",
+          "cardData": {
+            "id": "base6-3",
+            "name": "Charizard",
+            "supertype": "Pokémon",
+            "subtypes": [
+              "Stage 2"
+            ],
+            "level": "76",
+            "hp": "120",
+            "types": [
+              "Fire"
+            ],
+            "evolvesFrom": "Charmeleon",
+            "abilities": [
+              {
+                "name": "Energy Burn",
+                "text": "As often as you like during your turn (before your attack), you may turn all Energy attached to Charizard into Fire Energy for the rest of the turn. This power can't be used if Charizard is affected by a Special Condition.",
+                "type": "Pokémon Power"
+              }
+            ],
+            "attacks": [
+              {
+                "name": "Fire Spin",
+                "cost": [
+                  "Fire",
+                  "Fire",
+                  "Fire",
+                  "Fire"
+                ],
+                "convertedEnergyCost": 4,
+                "damage": "100",
+                "text": "Discard 2 Energy cards attached to Charizard or this attack does nothing."
+              }
+            ],
+            "weaknesses": [
+              {
+                "type": "Water",
+                "value": "×2"
+              }
+            ],
+            "resistances": [
+              {
+                "type": "Fighting",
+                "value": "-30"
+              }
+            ],
+            "retreatCost": [
+              "Colorless",
+              "Colorless",
+              "Colorless"
+            ],
+            "convertedRetreatCost": 3,
+            "set": {
+              "id": "base6",
+              "name": "Legendary Collection",
+              "series": "Other",
+              "printedTotal": 110,
+              "total": 110,
+              "legalities": {
+                "unlimited": "Legal"
+              },
+              "ptcgoCode": "LC",
+              "releaseDate": "2002/05/24",
+              "updatedAt": "2020/08/14 09:35:00",
+              "images": {
+                "symbol": "https://images.pokemontcg.io/base6/symbol.png",
+                "logo": "https://images.pokemontcg.io/base6/logo.png"
+              }
+            },
+            "number": "3",
+            "artist": "Mitsuhiro Arita",
+            "rarity": "Rare Holo",
+            "flavorText": "Spits fire that is hot enough to melt boulders. Known to unintentionally cause forest fires.",
+            "nationalPokedexNumbers": [
+              6
+            ],
+            "legalities": {
+              "unlimited": "Legal"
+            },
+            "images": {
+              "small": "https://images.pokemontcg.io/base6/3.png",
+              "large": "https://images.pokemontcg.io/base6/3_hires.png"
+            },
+            "tcgplayer": {
+              "url": "https://prices.pokemontcg.io/tcgplayer/base6-3",
+              "updatedAt": "2024/02/29",
+              "prices": {
+                "holofoil": {
+                  "low": 199.99,
+                  "mid": 221.54,
+                  "high": 319.9,
+                  "market": 327.5,
+                  "directLow": 317.95
+                },
+                "reverseHolofoil": {
+                  "low": 898.95,
+                  "mid": 1134.85,
+                  "high": 5000,
+                  "market": 694.99,
+                  "directLow": null
+                }
+              }
+            },
+            "cardmarket": {
+              "url": "https://prices.pokemontcg.io/cardmarket/base6-3",
+              "updatedAt": "2024/02/29",
+              "prices": {
+                "averageSellPrice": 81.52,
+                "lowPrice": 24.99,
+                "trendPrice": 65.65,
+                "germanProLow": 0,
+                "suggestedPrice": 0,
+                "reverseHoloSell": 1800,
+                "reverseHoloLow": 124.99,
+                "reverseHoloTrend": 989.35,
+                "lowPriceExPlus": 98,
+                "avg1": 89.95,
+                "avg7": 80.27,
+                "avg30": 84.46,
+                "reverseHoloAvg1": 1800,
+                "reverseHoloAvg7": 601.75,
+                "reverseHoloAvg30": 610.79
+              }
+            }
+          }
+        },
+        {
+          "cardId": "neo4-6",
+          "gameName": "pokemon",
+          "cardData": {
+            "id": "neo4-6",
+            "name": "Dark Gengar",
+            "supertype": "Pokémon",
+            "subtypes": [
+              "Stage 2"
+            ],
+            "level": "32",
+            "hp": "70",
+            "types": [
+              "Psychic"
+            ],
+            "evolvesFrom": "Dark Haunter",
+            "abilities": [
+              {
+                "name": "Deep Sleep",
+                "text": "As long as any Dark Gengar are in play, a player flips 2 coins for each of his or her Pokémon that is Asleep at the end of each turn. If either of them is tails, that Pokémon is still Asleep. This power stops working if Dark Gengar is Asleep, Confused, or Paralyzed.",
+                "type": "Pokémon Power"
+              }
+            ],
+            "attacks": [
+              {
+                "name": "Pull In",
+                "cost": [
+                  "Psychic",
+                  "Psychic",
+                  "Psychic"
+                ],
+                "convertedEnergyCost": 3,
+                "damage": "30",
+                "text": "If your opponent has any Benched Pokémon, you may choose 1 of them and switch it with the Defending Pokémon (before doing damage or other effects of this attack). Either way, the Defending Pokémon is now Asleep."
+              }
+            ],
+            "resistances": [
+              {
+                "type": "Fighting",
+                "value": "-30"
+              }
+            ],
+            "retreatCost": [
+              "Colorless",
+              "Colorless"
+            ],
+            "convertedRetreatCost": 2,
+            "set": {
+              "id": "neo4",
+              "name": "Neo Destiny",
+              "series": "Neo",
+              "printedTotal": 105,
+              "total": 113,
+              "legalities": {
+                "unlimited": "Legal"
+              },
+              "ptcgoCode": "N4",
+              "releaseDate": "2002/02/28",
+              "updatedAt": "2020/09/25 10:09:00",
+              "images": {
+                "symbol": "https://images.pokemontcg.io/neo4/symbol.png",
+                "logo": "https://images.pokemontcg.io/neo4/logo.png"
+              }
+            },
+            "number": "6",
+            "artist": "Aya Kusube",
+            "rarity": "Rare Holo",
+            "flavorText": "It absorbs the heat in the air around it. If you suddenly feel cold, it's because a Gengar has appeared.",
+            "nationalPokedexNumbers": [
+              94
+            ],
+            "legalities": {
+              "unlimited": "Legal"
+            },
+            "images": {
+              "small": "https://images.pokemontcg.io/neo4/6.png",
+              "large": "https://images.pokemontcg.io/neo4/6_hires.png"
+            },
+            "tcgplayer": {
+              "url": "https://prices.pokemontcg.io/tcgplayer/neo4-6",
+              "updatedAt": "2024/02/29",
+              "prices": {
+                "1stEditionHolofoil": {
+                  "low": 350,
+                  "mid": 416.98,
+                  "high": 483.95,
+                  "market": 210,
+                  "directLow": null
+                },
+                "unlimitedHolofoil": {
+                  "low": 99.99,
+                  "mid": 115,
+                  "high": 191.95,
+                  "market": 157.29,
+                  "directLow": null
+                }
+              }
+            },
+            "cardmarket": {
+              "url": "https://prices.pokemontcg.io/cardmarket/neo4-6",
+              "updatedAt": "2024/02/29",
+              "prices": {
+                "averageSellPrice": 120.36,
+                "lowPrice": 15,
+                "trendPrice": 115.04,
+                "germanProLow": 0,
+                "suggestedPrice": 0,
+                "reverseHoloSell": 0,
+                "reverseHoloLow": 0,
+                "reverseHoloTrend": 46.87,
+                "lowPriceExPlus": 37,
+                "avg1": 229,
+                "avg7": 122.37,
+                "avg30": 78.77,
+                "reverseHoloAvg1": 24,
+                "reverseHoloAvg7": 44.45,
+                "reverseHoloAvg30": 36.93
+              }
+            }
+          }
+        },
+        {
+          "cardId": "ecard1-103",
+          "gameName": "pokemon",
+          "cardData": {
+            "id": "ecard1-103",
+            "name": "Cubone",
+            "supertype": "Pokémon",
+            "subtypes": [
+              "Basic"
+            ],
+            "hp": "40",
+            "types": [
+              "Fighting"
+            ],
+            "evolvesTo": [
+              "Marowak"
+            ],
+            "attacks": [
+              {
+                "name": "Beat",
+                "cost": [
+                  "Colorless"
+                ],
+                "convertedEnergyCost": 1,
+                "damage": "10",
+                "text": ""
+              },
+              {
+                "name": "Bone Smash",
+                "cost": [
+                  "Fighting",
+                  "Colorless"
+                ],
+                "convertedEnergyCost": 2,
+                "damage": "30",
+                "text": "Flip a coin. If tails, this attack does nothing."
+              }
+            ],
+            "weaknesses": [
+              {
+                "type": "Grass",
+                "value": "×2"
+              }
+            ],
+            "resistances": [
+              {
+                "type": "Lightning",
+                "value": "-30"
+              }
+            ],
+            "retreatCost": [
+              "Colorless"
+            ],
+            "convertedRetreatCost": 1,
+            "set": {
+              "id": "ecard1",
+              "name": "Expedition Base Set",
+              "series": "E-Card",
+              "printedTotal": 165,
+              "total": 165,
+              "legalities": {
+                "unlimited": "Legal"
+              },
+              "ptcgoCode": "EX",
+              "releaseDate": "2002/09/15",
+              "updatedAt": "2022/10/10 15:12:00",
+              "images": {
+                "symbol": "https://images.pokemontcg.io/ecard1/symbol.png",
+                "logo": "https://images.pokemontcg.io/ecard1/logo.png"
+              }
+            },
+            "number": "103",
+            "artist": "Tomokazu Komiya",
+            "rarity": "Common",
+            "nationalPokedexNumbers": [
+              104
+            ],
+            "legalities": {
+              "unlimited": "Legal"
+            },
+            "images": {
+              "small": "https://images.pokemontcg.io/ecard1/103.png",
+              "large": "https://images.pokemontcg.io/ecard1/103_hires.png"
+            },
+            "tcgplayer": {
+              "url": "https://prices.pokemontcg.io/tcgplayer/ecard1-103",
+              "updatedAt": "2024/02/29",
+              "prices": {
+                "normal": {
+                  "low": 4,
+                  "mid": 6.2,
+                  "high": 25.24,
+                  "market": 6.31,
+                  "directLow": null
+                },
+                "reverseHolofoil": {
+                  "low": 35.88,
+                  "mid": 49.5,
+                  "high": 62.12,
+                  "market": 49.66,
+                  "directLow": null
+                }
+              }
+            },
+            "cardmarket": {
+              "url": "https://prices.pokemontcg.io/cardmarket/ecard1-103",
+              "updatedAt": "2024/02/29",
+              "prices": {
+                "averageSellPrice": 1.25,
+                "lowPrice": 0.04,
+                "trendPrice": 1,
+                "germanProLow": 0,
+                "suggestedPrice": 0,
+                "reverseHoloSell": 0,
+                "reverseHoloLow": 1.89,
+                "reverseHoloTrend": 8.34,
+                "lowPriceExPlus": 0.4,
+                "avg1": 1,
+                "avg7": 1.08,
+                "avg30": 1.61,
+                "reverseHoloAvg1": 8.49,
+                "reverseHoloAvg7": 6.94,
+                "reverseHoloAvg30": 8.21
+              }
+            }
+          }
+        },
+        {
+          "cardId": "362f1fe9-20af-434c-9957-7a1a564d89e6",
+          "gameName": "magic",
+          "cardData": {
+            "object": "card",
+            "id": "362f1fe9-20af-434c-9957-7a1a564d89e6",
+            "oracle_id": "e7b1975d-9574-4333-8530-33167948078a",
+            "multiverse_ids": [
+              1445
+            ],
+            "tcgplayer_id": 3901,
+            "cardmarket_id": 6991,
+            "name": "Hellfire",
+            "lang": "en",
+            "released_at": "1994-06-01",
+            "uri": "https://api.scryfall.com/cards/362f1fe9-20af-434c-9957-7a1a564d89e6",
+            "scryfall_uri": "https://scryfall.com/card/leg/105/hellfire?utm_source=api",
+            "layout": "normal",
+            "highres_image": true,
+            "image_status": "highres_scan",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/3/6/362f1fe9-20af-434c-9957-7a1a564d89e6.jpg?1592364391",
+              "normal": "https://cards.scryfall.io/normal/front/3/6/362f1fe9-20af-434c-9957-7a1a564d89e6.jpg?1592364391",
+              "large": "https://cards.scryfall.io/large/front/3/6/362f1fe9-20af-434c-9957-7a1a564d89e6.jpg?1592364391",
+              "png": "https://cards.scryfall.io/png/front/3/6/362f1fe9-20af-434c-9957-7a1a564d89e6.png?1592364391",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/3/6/362f1fe9-20af-434c-9957-7a1a564d89e6.jpg?1592364391",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/3/6/362f1fe9-20af-434c-9957-7a1a564d89e6.jpg?1592364391"
+            },
+            "mana_cost": "{2}{B}{B}{B}",
+            "cmc": 5,
+            "type_line": "Sorcery",
+            "oracle_text": "Destroy all nonblack creatures. Hellfire deals X plus 3 damage to you, where X is the number of creatures that died this way.",
+            "colors": [
+              "B"
+            ],
+            "color_identity": [
+              "B"
+            ],
+            "keywords": [],
+            "legalities": {
+              "standard": "not_legal",
+              "future": "not_legal",
+              "historic": "not_legal",
+              "timeless": "not_legal",
+              "gladiator": "not_legal",
+              "pioneer": "not_legal",
+              "explorer": "not_legal",
+              "modern": "not_legal",
+              "legacy": "legal",
+              "pauper": "not_legal",
+              "vintage": "legal",
+              "penny": "legal",
+              "commander": "legal",
+              "oathbreaker": "legal",
+              "standardbrawl": "not_legal",
+              "brawl": "not_legal",
+              "alchemy": "not_legal",
+              "paupercommander": "not_legal",
+              "duel": "legal",
+              "oldschool": "legal",
+              "premodern": "not_legal",
+              "predh": "legal"
+            },
+            "games": [
+              "paper"
+            ],
+            "reserved": true,
+            "foil": false,
+            "nonfoil": true,
+            "finishes": [
+              "nonfoil"
+            ],
+            "oversized": false,
+            "promo": false,
+            "reprint": false,
+            "variation": false,
+            "set_id": "78c50b4b-b220-455b-a2d5-cee458fa56f3",
+            "set": "leg",
+            "set_name": "Legends",
+            "set_type": "expansion",
+            "set_uri": "https://api.scryfall.com/sets/78c50b4b-b220-455b-a2d5-cee458fa56f3",
+            "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aleg&unique=prints",
+            "scryfall_set_uri": "https://scryfall.com/sets/leg?utm_source=api",
+            "rulings_uri": "https://api.scryfall.com/cards/362f1fe9-20af-434c-9957-7a1a564d89e6/rulings",
+            "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Ae7b1975d-9574-4333-8530-33167948078a&unique=prints",
+            "collector_number": "105",
+            "digital": false,
+            "rarity": "rare",
+            "flavor_text": "\"High on a throne of royal state . . . insatiate to pursue vain war with heav'n.\" —John Milton, *Paradise Lost*",
+            "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+            "artist": "Pete Venters",
+            "artist_ids": [
+              "d54c4a1a-c0c5-4834-84db-125d341f3ad8"
+            ],
+            "illustration_id": "115d34d8-3400-478f-a576-cf99dd93ec6c",
+            "border_color": "black",
+            "frame": "1993",
+            "full_art": false,
+            "textless": false,
+            "booster": true,
+            "story_spotlight": false,
+            "edhrec_rank": 20584,
+            "penny_rank": 12305,
+            "prices": {
+              "usd": "106.55",
+              "usd_foil": null,
+              "usd_etched": null,
+              "eur": "85.91",
+              "eur_foil": null,
+              "tix": null
+            },
+            "related_uris": {
+              "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=1445&printed=false",
+              "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DHellfire",
+              "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DHellfire",
+              "edhrec": "https://edhrec.com/route/?cc=Hellfire"
+            },
+            "purchase_uris": {
+              "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F3901%3Fpage%3D1",
+              "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Hellfire&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+              "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Hellfire&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
             }
           }
         }
