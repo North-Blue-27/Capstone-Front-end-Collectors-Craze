@@ -1,6 +1,6 @@
 # Capstone-Front-end-Collectors-Craze
 
-                                                                          COLLECTOR'S CRAZE
+
 
 Collector's Craze è una piattaforma per giochi di carte collezionabili che consente agli utenti di cercare e visualizzare dettagli sulle carte, aggiungerle ai preferiti e gestire la propria collezione. Attualmente supporta due giochi di carte collezionabili, ma verranno implementati altri giochi in futuro. L'applicazione è completamente responsive e ottimizzata per essere fruibile su dispositivi desktop, tablet e smartphone.
 
@@ -28,44 +28,47 @@ Collector's Craze è sviluppato con le seguenti tecnologie:
 
 Installazione
 
-    Clona il repository:
+Clona il repository:
 
-git clone <URL del repository>
+     git clone <URL del repository>
 
-    Naviga nella directory del progetto:
+Naviga nella directory del progetto:
 
-bash
+    bash
 
-cd collectors-craze
+    cd collectors-craze
 
-    Installa le dipendenze:
+Installa le dipendenze:
 
-bash
+    bash
 
-npm install
+    npm install
 
 Avvio dell'applicazione
 
 Per avviare Collector's Craze, esegui il seguente comando dalla radice del progetto:
 
-bash
+    bash
 
-npm start
+    npm start
 
 L'applicazione sarà disponibile all'indirizzo http://localhost:3000.
 
-    Avvio del server API:
+Avvio del server API:
 
 Collector's Craze utilizza json-server come server API per gestire i dati della collezione e dell'autenticazione degli utenti. 
 
 Per avviare il server API, esegui il seguente comando dalla radice del progetto:
 
-bash
+    bash
 
-npx json-server --watch db.json --middlewares ./node_modules/json-server-auth --port 3001
+    npx json-server --watch db.json --middlewares ./node_modules/json-server-auth --port 3001
 
 Il server sarà disponibile all'indirizzo http://localhost:3001.
 
+Contatti:  Linkedin: Antonio Casalena - GitHub: Antonio Casalena / Nort-Blue-27
+
 Per ulteriori informazioni sull'utilizzo dell'applicazione, la struttura del codice e le funzionalità, 
 consulta la documentazione nel repository.
+
 
